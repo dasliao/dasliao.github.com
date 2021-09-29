@@ -1,0 +1,30 @@
+body {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+#banner {
+    width: 1100px;
+    height: 250px;
+    margin: 0 auto;
+    border: 2px solid black;
+    position: relative;
+}
+
+#ban-inner-1, #ban-inner-2, #ban-inner-3, #ban-inner-4, #ban-inner-5, #ban-inner-6  {
+    border: 2px solid darkolivegreen;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    transform: translate(0, 10%);
+    position: absolute;
+    transition: 500ms;
+}
+
+#banner div:hover {
+    border: 5px solid lightcoral;
+    box-sizing: border-box;
+}
+
+
+
