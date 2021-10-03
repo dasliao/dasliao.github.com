@@ -224,23 +224,18 @@ main section:hover {
     box-shadow: 0px 0px 10px #2c384598;
 }
 
-main section:hover .link-name {
-    background-color: #e0e6e9;
-    color: #2c3845;
-}
-
-main section:hover h2 {
-    color: rgb(255, 255, 255);
-}
 
 
-main section h2 {
+
+main section h3 {
+    line-height: 1;
     text-align: left;
     font-family: 'Oxygen', sans-serif;
     font-weight: 900;
     font-size: 28px;
     text-transform: uppercase;
     padding: 0 10%;
+    display: inline
 }
 
 section li {
@@ -278,6 +273,15 @@ section .link-arrows {
     color: #e0e6e900;
     transition: all 500ms;
     line-height: 1;
+}
+
+main section:hover .link-name {
+    background-color: #e0e6e9;
+    color: #2c3845;
+}
+
+main section:hover h3 {
+    color: rgb(255, 255, 255);
 }
 
 main section li:hover .link-name {
