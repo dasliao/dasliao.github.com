@@ -329,7 +329,7 @@ footer a {
     font-size: 20px;
     padding: 15px 0px ;
     color: #4b748e;
-    border: 1px solid #4b748e;
+    border: 1px solid #2c3845;
     box-shadow: 0px 0px 10px #4b748e67;
     transition: all 500ms;
     transition-timing-function: ease-in-out;
@@ -345,5 +345,5 @@ footer a:hover {
     width: 33%;
     color: white;
     background-color: #2c3845;
-    line-height: 1;
+    border: 1px solid #4b748e;
 }
