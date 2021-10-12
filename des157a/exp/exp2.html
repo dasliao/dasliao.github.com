@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a Triangle</title>
+    <style>
+        p {line-height: 0.1em; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>This is the 2nd experiment!</h1>
+    <div id="triangle"></div>
+    <script>
+        var colors = ['blue','red','yellow','orange','pink','green','purple','grey','random'];
+        var row = prompt("Let's draw a triangle with *, \nenter the number of row (at least 2):","");
+        var triColor = prompt("Choose the color from \n'blue','red','yellow','orange','pink','green','purple','grey', \nor type 'random' so the program will choose a color for each row!(case sensitive, use lowercase)",'')
+        var myTri = document.querySelector('#triangle');
+
+        function formTri(r) {
+            var tempTri = "";
+            for (var i = 1; i <= r; i++) {
+                tempTri += '<p>';
+                for (var s = 0; s < i; s++) {
+                    tempTri += '*';
+                }
+                tempTri += '</p>'
+            }
+            console.log(tempTri);
+            return tempTri;
+        }
+
+        function randomNum(max, min) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function setColor(cArr, inColor) {
+            if (inColor === 'random') {
+                console.log(colors.length - 2);
+                var cIdx = randomNum(colors.length - 2, 0);
+                return cArr[cIdx]
+            } else {
+                return inColor;
+            }
+            
+        }
+
+        function changeColor(tri, triC) {
+            for (var i = 0; i < tri.children.length; i++) {
+                tri.children[i].style.color = setColor(colors, triColor);
+            }
+        }
+
+        myTri.innerHTML = formTri(row);
+        changeColor(myTri, triColor);
+        
+        
+    </script>
+</body>
+</html>
