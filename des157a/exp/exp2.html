@@ -13,9 +13,15 @@
     <h1>This is the 2nd experiment!</h1>
     <div id="triangle"></div>
     <script>
+        /*
+        This program draws a triangle with '*' from users input.
+        User need to input the number of the row they want this triangle be.
+        User then will be ask to choose a color for the triangle.
+        The program will then form a triangle and apply the color to it. If the user choose color 'random,' the program will apply different color to each row.
+        */
         var colors = ['blue','red','yellow','orange','pink','green','purple','grey','random'];
         var row = prompt("Let's draw a triangle with *, \nenter the number of row (at least 2):","");
-        var triColor = prompt("Choose the color from \n'blue','red','yellow','orange','pink','green','purple','grey', \nor type 'random' so the program will choose a color for each row!(case sensitive, use lowercase)",'')
+        var triColor = prompt("Choose the color from \n'blue','red','yellow','orange','pink','green','purple','grey', \nor type 'random' so the program will choose a color for each row!\n Leave it blank for color 'black.'(case sensitive, use lowercase)",'')
         var myTri = document.querySelector('#triangle');
 
         function formTri(r) {
