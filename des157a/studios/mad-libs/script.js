@@ -45,24 +45,23 @@
         processIndicator[processIdx].style.opacity = 1;
     }
 
-    // Button Style Event Listeners 
-    // nextBtn.addEventListener('mouseover', function(){
-    //     nextBtn.style.cursor = 'pointer';
-    // });
-
-    nextBtn.addEventListener('mousedown',function() {
+    nextBtn.addEventListener('mousedown',function(e) {
+        e.preventDefault();
         nextBtn.style.paddingLeft = '35px';
     });
 
     nextBtn.addEventListener('mouseup',function(e) {
+        e.preventDefault();
         nextBtn.style.paddingLeft = '';
     });
 
-    backBtn.addEventListener('mousedown',function() {
+    backBtn.addEventListener('mousedown',function(e) {
+        e.preventDefault();
         backBtn.style.paddingRight = '35px';
     });
 
     backBtn.addEventListener('mouseup',function(e) {
+        e.preventDefault();
         backBtn.style.paddingRight = '';
     });
     
@@ -71,14 +70,14 @@
 
     function processIndicatorSwitch() {
         for (let i = 0; i < processIndicator.length; i++) {
-            processIndicator[i].addEventListener('click', function(){
-                // console.log(processIndicator[i]);
+            processIndicator[i].addEventListener('click', function(e){
+                e.preventDefault();
                 preProcessIdx = processIdx;
                 processIdx = i;
                 displayInputArea(processIdx, preProcessIdx);
             });
-            processIndicatorCircle[i].addEventListener('click', function(){
-                // console.log(processIndicator[i]);
+            processIndicatorCircle[i].addEventListener('click', function(e){
+                e.preventDefault();
                 preProcessIdx = processIdx;
                 processIdx = i;
                 displayInputArea(processIdx, preProcessIdx);
@@ -254,7 +253,7 @@
 
     //Events Listeners
 
-    document.addEventListener('keydown', function(e){
+    document.addEventListener('keydown', function(){
         if (e.key == 'Enter' || e.key == 'Tab' || e.key == 'ArrowRight') {
             idxIncrement();
             displayInputArea(processIdx, preProcessIdx);
