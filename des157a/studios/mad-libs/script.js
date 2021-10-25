@@ -266,8 +266,7 @@
         }
     });
 
-    document.addEventListener('click', function(evt) {
-        evt.preventDefault();
+    document.addEventListener('click', function() {
         let input = evt.target;
         if (input.getAttribute('id') == 'next-btn') {
             idxIncrement();
