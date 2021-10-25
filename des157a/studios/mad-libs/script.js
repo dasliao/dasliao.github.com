@@ -46,22 +46,18 @@
     }
 
     nextBtn.addEventListener('mousedown',function(e) {
-        e.preventDefault();
         nextBtn.style.paddingLeft = '35px';
     });
 
     nextBtn.addEventListener('mouseup',function(e) {
-        e.preventDefault();
         nextBtn.style.paddingLeft = '';
     });
 
     backBtn.addEventListener('mousedown',function(e) {
-        e.preventDefault();
         backBtn.style.paddingRight = '35px';
     });
 
     backBtn.addEventListener('mouseup',function(e) {
-        e.preventDefault();
         backBtn.style.paddingRight = '';
     });
     
@@ -71,13 +67,13 @@
     function processIndicatorSwitch() {
         for (let i = 0; i < processIndicator.length; i++) {
             processIndicator[i].addEventListener('click', function(e){
-                e.preventDefault();
+                // e.preventDefault();
                 preProcessIdx = processIdx;
                 processIdx = i;
                 displayInputArea(processIdx, preProcessIdx);
             });
             processIndicatorCircle[i].addEventListener('click', function(e){
-                e.preventDefault();
+                // e.preventDefault();
                 preProcessIdx = processIdx;
                 processIdx = i;
                 displayInputArea(processIdx, preProcessIdx);
