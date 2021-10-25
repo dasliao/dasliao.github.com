@@ -46,6 +46,9 @@
     }
 
     // Button Style Event Listeners 
+    // nextBtn.addEventListener('mouseover', function(){
+    //     nextBtn.style.cursor = 'pointer';
+    // });
 
     nextBtn.addEventListener('mousedown',function() {
         nextBtn.style.paddingLeft = '35px';
@@ -157,6 +160,7 @@
             inputAreaLabel[processIdx].style.fontSize = '16px';
             inputAreaLabel[processIdx].style.fontWeight = '500';
             inputAreaLabel[processIdx].style.top = '30%';
+            inputAreaLabel[processIdx].style.cursor = 'pointer';
         }
         
         if (input.getAttribute('id') == 'my-form' || input.getAttribute('id') == 'main-container' ) {
@@ -167,6 +171,7 @@
             inputAreaLabel[processIdx].style.fontSize = '';
             inputAreaLabel[processIdx].style.fontWeight = '';
             inputAreaLabel[processIdx].style.top = '';
+            inputAreaLabel[processIdx].style.cursor = '';
         }
     }
 
