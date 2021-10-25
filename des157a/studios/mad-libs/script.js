@@ -26,16 +26,6 @@
     let displayForm = true;
     let formValidator = false;
     
-    
-    console.log(header);
-    console.log(myForm);
-    console.log(inputArea);
-    console.log(inputAreaBox);
-    console.log(inputAreaLabel);
-    console.log(processIndicator);
-    console.log(processIndicatorCircle);
-    console.log(madLibPara);
-
 
     // Initial Input Area
     if (processIdx == null) {
@@ -67,13 +57,6 @@
     function processIndicatorSwitch() {
         for (let i = 0; i < processIndicator.length; i++) {
             processIndicator[i].addEventListener('click', function(e){
-                // e.preventDefault();
-                preProcessIdx = processIdx;
-                processIdx = i;
-                displayInputArea(processIdx, preProcessIdx);
-            });
-            processIndicatorCircle[i].addEventListener('click', function(e){
-                // e.preventDefault();
                 preProcessIdx = processIdx;
                 processIdx = i;
                 displayInputArea(processIdx, preProcessIdx);
@@ -91,6 +74,15 @@
         } else{
             inputArea[processIdx].style.visibility = "hidden";
             inputArea[processIdx].style.opacity = "0";
+        }
+        if (idx == 0) {
+            backBtn.style.visibility = 'hidden';
+        } else {
+            if(nextBtn.style.visibility == 'hidden') {
+                backBtn.style.visibility = 'hidden';
+            }else {
+                backBtn.style.visibility = 'visible';
+            }
         }
         if (preIdx > idx) {
             for (let i = preIdx; i > idx; i--) {
@@ -119,10 +111,11 @@
             nextBtn.innerText = 'SUBMIT';
             nextBtn.style.paddingRight = '25px';
             submitBtn = nextBtn;
-            submitBtn.addEventListener('click', function(){
+            submitBtn.addEventListener('click', function(e){
+                e.preventDefault();
                 let inputForm = document.querySelectorAll('input');
                 for (let i = 0; i < inputForm.length; i++) {
-                    if (inputForm[i].value == '' || inputForm[i].value == null) {
+                    if (!inputForm[i].value) {
                         formValidator = false;
                         formData =[];
                         i = inputForm.length;
@@ -195,7 +188,7 @@
             formValidator = true;
             if (processIdx < inputArea.length - 1) {
                 processIdx++;
-                backBtn.style.visibility = 'visible';
+                // backBtn.style.visibility = 'visible';
             }
         }
         errorDisplay(formValidator);
@@ -249,7 +242,7 @@
 
     //Events Listeners
 
-    document.addEventListener('keydown', function(){
+    document.addEventListener('keydown', function(e){
         if (e.key == 'Enter' || e.key == 'Tab' || e.key == 'ArrowRight') {
             idxIncrement();
             displayInputArea(processIdx, preProcessIdx);
@@ -262,7 +255,7 @@
         }
     });
 
-    document.addEventListener('click', function() {
+    document.addEventListener('click', function(evt) {
         let input = evt.target;
         if (input.getAttribute('id') == 'next-btn') {
             idxIncrement();
