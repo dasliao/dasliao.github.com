@@ -1,15 +1,339 @@
-#container {
-    max-width: 1336px;
-    height: 768px;
-}
-#container {
-    max-width: 1336px;
-    height: 768px;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 
+#container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1336px;
+    height: 768px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 226px;
+    margin: 0 auto;
+    
+}
+
+header {
+    position: relative;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-size: 56px;
+    bottom: 0px;
+    top: 90px;
+    text-align: center;
+    margin: 0 auto;
+}
 
 main {
-    width:1000px;
-    height: 500px;
-    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1336px;
+    height: 768px;
+    transform: translate(-50%, -50%);
+}
+
+
+#form-container  {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 914px;
+    height: 322px;
+}
+
+form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.input-area {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    transition: all 500ms ease-in-out;
+}
+
+.input-area-boxes {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    width: 400px;
+    transform:translate(-50%, -50%);
+    border-radius: 25px;
+    border: 1px solid darkgrey;
+    text-align: center;
+    font-size: 18px;
+    color: darkgray;
+    font-weight: 300;
+    transition: all 500ms ease-in-out;
+}
+
+.input-area-labels {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    display: inline;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    color: #BABABA;
+    transition: all 300ms ease-in-out;
+}
+
+#process-indicator-circle, #process-indicator-fill {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.indicator-circle, .indicator-fill {
+    width: 12px;
+}
+
+.indicator-fill {
+    opacity: 0;
+}
+
+
+nav {
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    top: 574px;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 917px;
+    height: 26px;
+    transition: all 300ms ease-in-out;
+}
+
+#next-btn, #back-btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    border: 1px solid #666666;
+    border-radius: 15px;
+    padding: 8px 25px;
+    font-size: 20px;
+    font-weight: 300;
+    transition: all 200ms ease-in-out;
+    line-height: 1em;
+    color: #666666;
+}
+
+#next-btn {
+    padding-right: 20px;
+}
+
+#back-btn {
+    visibility: hidden;
+    padding-left: 20px;
+}
+
+#next-btn:hover, #back-btn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#error-message {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 605px;
+    right: 60px;
+    border-left: 1px solid red;
+    padding-left: 10px ;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    line-height: 0.5em;
+    color: red;
+    font-weight: 500;
+    
+}
+
+#error-message p {
+    margin-bottom: 2px;
+}
+
+#scroll-sign {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    text-align: center;
+    transition: all 1s ease-in;
+}
+
+#scroll-sign img {
+    width: 50px;
+}
+
+#scroll-sign p {
+    margin: 0;
+}
+
+#madlibs {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 868.53px;
+    height: 768px;
+    box-sizing: border-box;
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+}
+
+.input-words {
+    font-weight: 500;
+}
+
+.madlib-para {
+    position: absolute;
+    visibility: hidden;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    opacity: 0;
+    text-transform: capitalize;
+    transition: all 500ms ease-in-out;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.madlib-para a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.bkg-1 {
+    background-color: rgb(184, 120, 43);
+    transition: all 2s;
+}
+
+.bkg-2 {
+    background-color: rgb(126, 34, 34);
+    transition: all 2s;
+}
+
+.bkg-3 {
+    background-color: rgb(110, 61, 139);
+    transition: all 2s;
+}
+
+.bkg-4 {
+    background-color: rgb(57, 57, 131);
+    transition: all 2s;
+}
+
+.bkg-5 {
+    background-color: rgb(23, 128, 128);
+    transition: all 2s;
+}
+
+.bkg-6 {
+    background-color: rgb(37, 105, 37);
+    transition: all 2s;
+}
+
+.bkg-7 {
+    background-color: darkolivegreen;
+    transition: all 2s;
+}
+
+.bkg-8 {
+    background-color: rgb(216, 199, 49);
+    transition: all 2s;
+}
+
+.footer-hori {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.footer-hori a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.footer-hori a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-vert {
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width: 110px;
+    margin: 0 auto;
+    border: 3px solid #F2F2F2;
+    background-color: unset;
+    padding: 30px 20px;
+}
+
+.footer-vert a{
+    visibility: visible;
+    opacity: 1;
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 16px;
+}
+
+.footer-vert a:hover{
+    text-decoration: none;
+    color: black;
 }

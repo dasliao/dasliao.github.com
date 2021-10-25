@@ -6,61 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Mad Libs</title>
+    <title>Mad Libs : Tell Your Story of a Tech Company</title>
 </head>
 <body>
     <div id="container">
         <header>
-            <h1>Mad Libs</h1>
-            <h2>A Tech Story</h2>
+            <h1>Tell Your Story<br>of a Tech Company</h1>
         </header>
-        <main>
-            <form id="myForm">
-                <label for="company">GIVE ME A TECH COMPANY NAME</label>
-                <input type="text" name="ompany" id="company" required>
+        <main id="main-container">
+            <div id="form-container">
+                <form id="my-form">
+                    <div id="company" class="input-area">
+                        <input type="text" name="company" id="company-input" class="input-area-boxes" required>
+                        <label for="company-input" id="company-label" class="input-area-labels" class='label-inactive'>A COMPANY NAME</label>
+                    </div> 
 
-                <label for="noun1">GIVE ME A NOUN</label>
-                <input type="text" name="noun1" id="noun1" required>
-                
-                <label for="noun2">GIVE ME A NOUN</label>
-                <input type="text" name="noun1" id="noun2">
+                    <div id="place" class="input-area">
+                        <input type="text" name="place" id="place-input" class="input-area-boxes" required>
+                        <label for="place-input" id="place-label" class="input-area-labels" class='label-inactive'>A PLACE</label>
+                    </div> 
 
-                <label for="noun3">GIVE ME A NOUN</label>
-                <input type="text" name="noun1" id="noun3">
+                    <div id="year" class="input-area">
+                        <input type="text" name="cyear" id="year-input" class="input-area-boxes" required>
+                        <label for="year-input" id="year-label" class="input-area-labels" class='label-inactive'>A YEAR</label>
+                    </div> 
 
-                <label for="noun4">GIVE ME A NOUN</label>
-                <input type="text" name="noun1" id="noun4">
+                    <div id="name-of-person" class="input-area">
+                        <input type="text" name="name" id="name-of-person-input" class="input-area-boxes" required>
+                        <label for="name-of-person-input" id="name-of-person-label" class="input-area-labels" class='label-inactive'>A NAME OF A PERSON</label>
+                    </div> 
 
-                <label for="adjective1">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="adjective1" id="adjective1">
+                    <div id="noun1" class="input-area">
+                        <input type="text" name="noun1" id="noun1-input" class="input-area-boxes" required>
+                        <label for="noun1-input" id="noun1-label" class="input-area-labels" class='label-inactive'>A NOUN</label>
+                    </div> 
 
-                <label for="adjective2">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="adjective2" id="adjective2">
+                    <div id="verb" class="input-area">
+                        <input type="text" name="verb" id="verb-input" class="input-area-boxes" required>
+                        <label for="verb-input" id="verb-label" class="input-area-labels" class='label-inactive'>A VERB</label>
+                    </div> 
 
-                <label for="adjective3">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="adjective3" id="adjective3">
+                    <div id="adj1" class="input-area">
+                        <input type="text" name="adj1" id="adj1-input" class="input-area-boxes" required>
+                        <label for="adj1-input" id="adj1-label" class="input-area-labels" class='label-inactive'>A ADJECTIVE</label>
+                    </div> 
 
-                <label for="verb1">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="verb1" id="verb1">
+                    <div id="adj2" class="input-area">
+                        <input type="text" name="adj2" id="adj2-input" class="input-area-boxes" required>
+                        <label for="adj2-input" id="adj2-label" class="input-area-labels" class='label-inactive'>ANOTHER ADJECTIVE</label>
+                    </div> 
 
-                <label for="verb2">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="verb2" id="verb2">
+                    <div id="noun2" class="input-area">
+                        <input type="text" name="noun2" id="noun2-input" class="input-area-boxes" required>
+                        <label for="noun2-input" id="noun2-label" class="input-area-labels" class='label-inactive'>ONE MORE NOUN</label>
+                    </div>
 
-                <label for="verb3">GIVE ME A ADJECTIVE</label>
-                <input type="text" name="verb3" id="verb3">
-
-                <input type="submit" value="send">
-            </form>
-
-            <article id="madlibs">
-
-            </article>
+                </form>
+                <section id="process-indicator-circle">
+                    <img src="images/1-circle.svg" alt="1-circle" id="1-circle" class="indicator-circle">
+                    <img src="images/2-circle.svg" alt="2-circle" id="2-circle" class="indicator-circle">
+                    <img src="images/3-circle.svg" alt="3-circle" id="3-circle" class="indicator-circle">
+                    <img src="images/4-circle.svg" alt="4-circle" id="4-circle" class="indicator-circle">
+                    <img src="images/5-circle.svg" alt="5-circle" id="5-circle" class="indicator-circle">
+                    <img src="images/6-circle.svg" alt="6-circle" id="6-circle" class="indicator-circle"> 
+                    <img src="images/7-circle.svg" alt="7-circle" id="7-circle" class="indicator-circle">
+                    <img src="images/8-circle.svg" alt="8-circle" id="8-circle" class="indicator-circle">
+                    <img src="images/9-circle.svg" alt="9-circle" id="9-circle" class="indicator-circle">
+                </section>
+                <section id="process-indicator-fill">
+                    <img src="images/1-circle-fill.svg" alt="1-fill" id="1-fill" class="indicator-fill">
+                    <img src="images/2-circle-fill.svg" alt="2-fill" id="2-fill" class="indicator-fill">
+                    <img src="images/3-circle-fill.svg" alt="3-fill" id="3-fill" class="indicator-fill">
+                    <img src="images/4-circle-fill.svg" alt="4-fill" id="4-fill" class="indicator-fill">
+                    <img src="images/5-circle-fill.svg" alt="5-fill" id="5-fill" class="indicator-fill">
+                    <img src="images/6-circle-fill.svg" alt="6-fill" id="6-fill" class="indicator-fill">
+                    <img src="images/7-circle-fill.svg" alt="7-fill" id="7-fill" class="indicator-fill">
+                    <img src="images/8-circle-fill.svg" alt="8-fill" id="8-fill" class="indicator-fill">
+                    <img src="images/9-circle-fill.svg" alt="9-fill" id="9-fill" class="indicator-fill">
+                </section>
+            </div>
+            <nav>
+                <button type="button" id="back-btn">< BACK</button>
+                <button type="button" id="next-btn">NEXT ></button>
+            </nav>
+            <section id="error-message">
+                <p>Cannot Continue!!!</p>
+                <p>Please Fill Out the Form!</p>
+            </section>
         </main>
-        <footer>
-
+        <section id="scroll-sign">
+            <img src="images/arrow-up.svg" alt="arrow-up">
+            <p>Scroll Down to View Your Story</p>
+        </section>
+        <article id="madlibs">
+            <p class='madlib-para'><span class="input-words" id="company-word"></span> is a company that focuses on "smart" technology.</p>
+            <p class='madlib-para'>Its headquarter is located in <span class="input-words" id="place-word"></span> and has expanded all over the world.</p>
+            <p class='madlib-para'>In <span class="input-words" id="year-word"></span>, the founder of the company, <span class="input-words" id="name-word"></span>, announced a product called smart-everything.</p>
+            <p class='madlib-para'>People call it <span class="input-words" id="noun1-word"></span> nowadays.</p>
+            <p class='madlib-para'>To <span class="input-words" id="verb-word"></span> this product, their marketing team has done an <span class="input-words" id="adjective1-word"></span> job to get the idea of smart into the customer's mind. </p>
+            <p class='madlib-para'>The trend was unstoppable, and a lot of people could not live without it.</p>
+            <p class='madlib-para'>They feel <span class="input-words" id="adjective2-word"></span> for what they have achieved and planning to take over the <span class="input-words" id="noun2-word"></span> in the next couple of years.</p>
+            <p class='madlib-para'><a href="">Try Again ></a></p>
+        </article>
+        <footer class="footer-hori">
+            <a href="mailto:&#098;&#117;&#102;&#102;&#101;&#114;&#045;&#100;&#101;&#098;&#116;&#111;&#114;&#046;&#048;&#064;&#105;&#099;&#108;&#111;&#117;&#100;&#046;&#099;&#111;&#109;">Email</a>
+            <a href="https://validator.w3.org/check?uri=https://dasliao.github.io/des157a">Valid HTML 5</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
         </footer>
     </div>
 </body>
