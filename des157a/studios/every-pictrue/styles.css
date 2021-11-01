@@ -1,0 +1,117 @@
+body {
+    position: relative;
+    margin: 0;
+}
+
+#container {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    margin: 0 atuo;
+}
+
+#container img {
+    display: block;
+    position: absolute;
+    transition: all 2s ease-in-out;
+}
+
+#svg-container {
+    position: absolute;
+    width: 1366px;
+    height: 768px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#mu-trace {
+    display: block;
+    position: absolute;
+    transition: all 2s ease-in-out;
+}
+
+.st0, .st1{
+    fill: rgba(255, 255, 255, 0);
+    stroke:white;
+    stroke-width:3;
+    stroke-miterlimit:10;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.start {
+    width: 1366px;
+    left: 0;
+    top: 0;
+}
+
+.bus-g, .bus-b, .bus-f, .bus-e, .bus-m, .bus-k, .bus-z, .bus-p, .bus-q {
+    width: 250%;
+}
+
+.bus-trip-1, .bus-trip-2, .bus-trip-3 {
+    width: 300%;
+}
+
+.bus-g {
+    top: -550px;
+    left: -200px;
+}
+
+.bus-b {
+    top: -550px;
+    left: -900px;
+}
+
+.bus-m {
+    top: -1000px;
+    left: -200px;
+}
+
+.bus-k {
+    top: -1000px;
+    left: -900px;
+}
+
+.bus-e {
+    top: -550px;
+    left: -200px;
+}
+
+.bus-f {
+    top: -550px;
+    left: -900px;
+}
+
+.bus-z {
+    top: 0px;
+    left: -200px;
+}
+
+.bus-p {
+    top: 0px;
+    left: -1800px;
+}
+
+.bus-q {
+    top: 0px;
+    left: -1050px;
+}
+
+.bus-trip-1 {
+    top: -1500px;
+    left: -100px;
+}
+
+.bus-trip-2 {
+    top: -1500px;
+    left: -800px;
+}
+
+.bus-trip-3 {
+    top: -1500px;
+    left: -1600px;
+}
+
+
