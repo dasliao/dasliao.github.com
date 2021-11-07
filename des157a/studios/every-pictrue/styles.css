@@ -5,33 +5,104 @@ body {
 
 #container {
     position: relative;
-    width: 1366px;
-    height: 768px;
+    width: 100%;
     margin: 0 atuo;
+    display: flex;
+
 }
 
-#container img {
+/* #mu-container img {
     display: block;
     position: absolute;
     transition: all 2s ease-in-out;
+} */
+
+.mu-on-start {
+    display: block;
+    position: absolute;
+    transition: all 2s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
 }
 
+.mu-on-start img {
+    visibility: hidden;
+}
+
+.mu-on-start .st0, .mu-on-start .st1 {
+    fill: rgba(255, 255, 255, 0);
+    stroke-width:3;
+    stroke-miterlimit:10;
+    opacity: 0;
+    transition: all 1s ease-in-out infi;
+    stroke-linecap: round;
+}
+
+.mu-on-start #t-island-top, .mu-on-start #t-island-middle { 
+    stroke-dasharray: 200; 
+    stroke-dashoffset: 2500; 
+    stroke: rgb(160, 160, 160);
+    animation: island-trace-in 10s ease-in-out forwards infinite; 
+    opacity: 0;
+}
+
+@keyframes island-trace-in {
+    5% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        fill: rgba(160, 160, 160, 0);
+    }
+    90% {
+        stroke-dasharray: 2500; 
+        stroke-dashoffset: 0;
+        fill: rgb(160, 160, 160);
+    }
+}
+
+.mu-on-start #t-island-top {animation-delay: 1s;}
+.mu-on-start #t-island-middle {animation-delay: 2s;}
+
+.mu-on-start .st1 { 
+    opacity: 1;
+    fill: rgba(226, 226, 226, 0); 
+    stroke-width: 0;
+    animation: buses-trace-in 5s ease-in-out infinite; 
+}
+
+@keyframes buses-trace-in {
+    70% {
+        fill: rgb(240, 240, 240);
+    }
+    100% {
+        fill: rgba(238, 238, 238, 0); 
+    }
+}
+
+.mu-on-start #bus-b {animation-delay: 0.3s;}
+.mu-on-start #bus-g {animation-delay: 1.7s;}
+.mu-on-start #bus-e {animation-delay: 1.5s;}
+.mu-on-start #bus-g {animation-delay: 0.2s;}
+.mu-on-start #bus-p {animation-delay: 1.2s;}
+.mu-on-start #bus-q {animation-delay: 0.2s;}
+.mu-on-start #bus-k {animation-delay: 1s;}
+.mu-on-start #bus-trip-1 {animation-delay: 1s;}
+.mu-on-start #bus-trip-2 {animation-delay: 1.3s;}
+.mu-on-start #bus-trip-3 {animation-delay: 0.5s;}
+
+
 #svg-container {
-    position: absolute;
-    width: 1366px;
-    height: 768px;
-    top: 0;
-    left: 0;
     z-index: 100;
 }
 
-#mu-trace {
-    display: block;
-    position: absolute;
-    transition: all 2s ease-in-out;
+.mu-after-load img {
+    visibility: visible;
 }
 
-.st0, .st1{
+.mu-after-load .st0, .mu-after-load .st1{
     fill: rgba(255, 255, 255, 0);
     stroke:white;
     stroke-width:3;
@@ -40,10 +111,16 @@ body {
     transition: all 1s ease-in-out;
 }
 
+.mu-after-load .st1 {
+    cursor: pointer;
+}
+
 .start {
-    width: 1366px;
+    position: absolute;
+    width: 100%;
     left: 0;
-    top: 0;
+    transition-property: width;
+    transition-duration: 0s;
 }
 
 .bus-g, .bus-b, .bus-f, .bus-e, .bus-m, .bus-k, .bus-z, .bus-p, .bus-q {
@@ -51,26 +128,26 @@ body {
 }
 
 .bus-trip-1, .bus-trip-2, .bus-trip-3 {
-    width: 300%;
+    width: 250%;
 }
 
 .bus-g {
-    top: -550px;
+    top: -50%;
     left: -200px;
 }
 
 .bus-b {
-    top: -550px;
+    top: -750px;
     left: -900px;
 }
 
 .bus-m {
-    top: -1000px;
+    top: -1200px;
     left: -200px;
-}
+} 
 
 .bus-k {
-    top: -1000px;
+    top: -1200px;
     left: -900px;
 }
 
@@ -114,4 +191,21 @@ body {
     left: -1600px;
 }
 
-
+#bkg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    transition: all 3s ease-in-out;
+}
+.cls-0{fill:#eeeeef;}
+.cls-1{fill:#d75771;}
+.cls-2{fill:#db715c;}
+.cls-3{fill:#e3b755;}
+.cls-4{fill:#419e5a;}
+.cls-5{fill:#51719b;}
+.cls-6{fill:#85679e;}
+.cls-7{fill:#d35da0;}
+.cls-8{fill:#464749;}
