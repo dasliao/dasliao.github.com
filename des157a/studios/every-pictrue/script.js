@@ -3,7 +3,6 @@
     console.log('reading js');
 
     const container = document.querySelector('#container');
-    const thePath = document.querySelectorAll('path');
     const theBuses = document.querySelectorAll('.st1');
     const theCurbs = document.querySelectorAll('.st0');
     const muTopImg = document.querySelector('#mu-top');
@@ -11,32 +10,19 @@
     const theBkg = document.querySelector('#bkg');
     const leftArrow = document.querySelector('#left-arrow');
     const leftArrowPath = document.querySelector('#left-arrow .cls-1');
-    const muContainer = document.querySelector('#mu-container');
     const footer = document.querySelector('footer');
     const bkgText = document.querySelector('#bkg div');
     const header = document.querySelector('header');
     const headerText = document.querySelectorAll("header h1");
 
-    
-    
-
-
-    // console.log(theBuses);
-    // console.log(muTopImg);
-    // console.log(muTrace);
-    // console.log(theStart);
-    
 
     window.onbeforeunload = function () {
 		window.scrollTo(0, 0);
 	}
 
     window.addEventListener('load', function() {
-        
-        // await loadImage("images/mu-day.jpg", muTopImg);
 
         const captions = document.querySelectorAll('article section');
-        // console.log(captions);
         let secTops = [];
         let pageTop;
         let cnt = 1;
@@ -53,11 +39,6 @@
 
         const muImgAfterLoad = document.querySelector('.main-container-layout-after-load .mu-after-load .imgs');
         console.log(muImgAfterLoad);
-
-        // if (window.innerHeight <= window.innerWidth) {
-        //     muImgAfterLoad.style.width = '100vw';
-        //     muImgAfterLoad.style.removeProperty('height');
-        // }
         
         resetPage();
 
@@ -171,11 +152,8 @@
     
             const pagePos = window.pageYOffset + window.innerHeight + 100;
             cnt = 0;
-            
-            // console.log(`pageTop Yoffset +250 is ${pagePos}`);
 
             secTops.forEach(function(sec) {
-                // console.log(`this is ${sec}`);
                 if (pagePos > sec) {
                     cnt++;
                 }

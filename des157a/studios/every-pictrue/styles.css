@@ -29,7 +29,7 @@ header h1 {
 #container {
     position: relative;
     width: 100vw;
-    margin: 0 atuo;
+    margin: 0 auto;
 }
 
 main > div {
@@ -268,7 +268,6 @@ footer a:hover {
 }
 
 .main-container-layout-after-scrolling #mu-container .caption-6 {
-    /* width: 2000px !important; */
     top: -950px;
     left: -300px;
 }
@@ -287,10 +286,6 @@ article {
     padding: 100vh 0 15vh 0;
     visibility: hidden;
 }
-
-/* article #instructions {
-    margin: 0 20px;
-} */
 
 article section {
     display: flex;
@@ -481,7 +476,7 @@ article section p {
     stroke-width:3;
     stroke-miterlimit:10;
     opacity: 0;
-    transition: all 1s ease-in-out infi;
+    transition: all 1s ease-in-out;
     stroke-linecap: round;
 }
 
