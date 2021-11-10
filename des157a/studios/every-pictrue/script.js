@@ -109,11 +109,6 @@
             }
             container.className = 'main-container-layout-after-scrolling';
             pageTop = window.pageYOffset + 450;
-            
-
-            console.log(`cnt ${cnt}`);
-            console.log(`PTop ${pageTop}`);
-            console.log(`secTop ${secTops[cnt]}`);
 
             if (pageTop > secTops[cnt]) {
                 cnt++;
@@ -187,19 +182,23 @@
             });
         }
 
+        theBuses.forEach(function (eachBus) {
+            console.log(eachBus);
+            eachBus.addEventListener('mouseover', function(){
+                eachBus.style.opacity = 1;
+            });
+            eachBus.addEventListener('mouseout', function(){
+                if (container.className != 'main-container-layout-after-scrolling'){
+                    eachBus.style.opacity = 0;
+                }
+            });
+        });
+
     }); // finish the load event listner
     
     
     
-    theBuses.forEach(function (eachBus) {
-        console.log(eachBus);
-        eachBus.addEventListener('mouseover', function(){
-            eachBus.style.opacity = 1;
-        });
-        eachBus.addEventListener('mouseout', function(){
-            eachBus.style.opacity = 0;
-        });
-    });
+    
 
     
 
