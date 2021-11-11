@@ -279,6 +279,31 @@ footer a:hover {
     left: -300px;
 }
 
+.main-container-layout-after-scrolling #mu-container .fade-in {
+    animation-name: fade-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }100% {
+        opacity: 1;
+    }
+}
+
+
+.main-container-layout-after-scrolling #mu-container .fade-out {
+    animation-name: fade-out;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }100% {
+        opacity: 0;
+    }
+}
+
 
 
 

@@ -62,17 +62,7 @@
             if (cnt == prevCnt) {
                 
                 if (cnt == 3) {
-                    preSrc = currentSrc;
-                    currentSrc = 'images/mu-night-light.jpg';
-                    muTopImgTwo.setAttribute('src', preSrc);
-                    muTopImgTwo.style.opacity = 1;
-                    muTopImgTwo.style.zIndex = 90;
-                    muTopImg.style.zIndex = 50;
-                    muTopImg.style.opacity = 1;
-                    muTopImg.setAttribute('src', currentSrc);
-                    muTopImgTwo.style.opacity = 0;
-                    muTopImg.style.zIndex = 90;
-                    muTopImgTwo.style.zIndex = 50;
+                    muTopImg.setAttribute('src', 'images/mu-night-light.jpg');
                 } else if (cnt == 2) {
                     muTopImg.setAttribute('src', 'images/mu-night.jpg');
                 } else if (cnt == 5) {
