@@ -1,27 +1,28 @@
 (function() {
     'use strict';
     console.log('reading js');
-
+    const body = document.querySelector('body');
     const container = document.querySelector('#container');
     const theBuses = document.querySelectorAll('.st1');
     const theCurbs = document.querySelectorAll('.st0');
     const muTopImg = document.querySelector('#mu-top');
+    const muTopImgTwo = document.querySelector('#mu-top-2');
     const muTrace = document.querySelector('#mu-trace');
     const theBkg = document.querySelector('#bkg');
-    const leftArrow = document.querySelector('#left-arrow');
-    const leftArrowPath = document.querySelector('#left-arrow .cls-1');
+    const explore = document.querySelector('#explore');
     const footer = document.querySelector('footer');
     const bkgText = document.querySelector('#bkg div');
     const header = document.querySelector('header');
     const headerText = document.querySelectorAll("header h1");
 
-
-    window.onbeforeunload = function () {
-		window.scrollTo(0, 0);
-	}
+    
+    window.onbeforeunload = function() {
+        window.scrollTo(0,0); 
+    }
 
     window.addEventListener('load', function() {
-
+        window.scrollTo(0, 0);
+        body.style.overflow = 'hidden';
         const captions = document.querySelectorAll('article section');
         let secTops = [];
         let pageTop;
@@ -30,8 +31,9 @@
         let doneResizing;
         let exitDir;
         let enterDir;
+        let currentSrc = muTopImg.getAttribute('src');
+        let preSrc;
         
-
         const preLoader = document.querySelector('.mu-on-start');
         container.className = 'main-container-layout-after-load';
         preLoader.className = 'mu-after-load';
@@ -42,18 +44,9 @@
         
         resetPage();
 
-
-        console.log(`left arrow ${leftArrow}`);
-
-        leftArrow.addEventListener('mouseover', function(){
-            leftArrowPath.style.fill = 'white';
-        });
-
-        leftArrow.addEventListener('mouseout', function(){
-            leftArrowPath.style.fill = '#eeeeefc2';
-        });
-
-        leftArrow.addEventListener('click', function(){
+        explore.addEventListener('click', function(){
+            explore.style.opacity = 0;
+            body.style.overflow = 'auto';
             container.className = 'main-container-layout-before-scrolling';
             header.style.top = '3vh';
             header.style.left = "4vw";
@@ -67,8 +60,19 @@
 
         window.addEventListener('scroll', function(){
             if (cnt == prevCnt) {
+                
                 if (cnt == 3) {
-                    muTopImg.setAttribute('src', 'images/mu-night-light.jpg');
+                    preSrc = currentSrc;
+                    currentSrc = 'images/mu-night-light.jpg';
+                    muTopImgTwo.setAttribute('src', preSrc);
+                    muTopImgTwo.style.opacity = 1;
+                    muTopImgTwo.style.zIndex = 90;
+                    muTopImg.style.zIndex = 50;
+                    muTopImg.style.opacity = 1;
+                    muTopImg.setAttribute('src', currentSrc);
+                    muTopImgTwo.style.opacity = 0;
+                    muTopImg.style.zIndex = 90;
+                    muTopImgTwo.style.zIndex = 50;
                 } else if (cnt == 2) {
                     muTopImg.setAttribute('src', 'images/mu-night.jpg');
                 } else if (cnt == 5) {
@@ -82,6 +86,7 @@
                     muTopImg.setAttribute('src', 'images/mu-day.jpg');
                 }
                 muTopImg.className = `imgs caption-${cnt}`;
+                muTopImgTwo.className = `imgs caption-${cnt}`;
                 muTrace.setAttribute('class', `imgs caption-${cnt}`);
                 theBkg.className = `cls-${cnt}`;
                 document.querySelectorAll(`.hotspot-${cnt}`).forEach(function(hotspot) {
@@ -99,6 +104,7 @@
 
             if (cnt != prevCnt) {
                 muTopImg.className = `imgs caption-${cnt}`;
+                muTopImgTwo.className = `imgs caption-${cnt}`;
                 muTrace.setAttribute('class', `imgs caption-${cnt}`);
                 theBkg.className = `cls-${cnt}`;
                 lightupHotSpot(cnt,prevCnt);
@@ -174,10 +180,6 @@
 
     }); // finish the load event listner
     
-    
-    
-    
 
-    
 
 })();

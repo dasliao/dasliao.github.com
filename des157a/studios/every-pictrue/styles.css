@@ -26,6 +26,26 @@ header h1 {
     transition: all 1s ease-in-out;
 }
 
+header h2{
+    font-size: 4vh;
+    font-weight: 700;
+    line-height: 7vh;
+    color: rgb(177, 100, 100);
+    background-color: rgb(255, 255, 255);
+    transition: all 500ms ease-in-out;
+    margin-top: 1vh;
+    padding-left: 30px;
+    width: 35vh;
+    opacity: 1;
+    cursor: pointer;
+}
+
+header h2:hover {
+    width: 41vh;
+    color: rgb(230, 94, 94);
+    background-color: rgb(0, 0, 0);
+}
+
 #container {
     position: relative;
     width: 100vw;
@@ -54,22 +74,18 @@ main > div .imgs {
     transition: all 750ms ease-in-out;
 }
 
-
-#left-arrow {
-    visibility: visible;
+#mu-top {
+    z-index: 90;
     opacity: 1;
-    transition: all 500ms ease-in-out;
-    width: 50px;
-    position: absolute;
-    z-index: 9999;
-    right: 5vw;
-    top: 50vh;
-    cursor: pointer;
 }
 
-#left-arrow .cls-1 {
-    fill: #eeeeefc2;
-    transition: all 500ms ease-in-out;
+#mu-top-2 {
+    z-index: 50;
+    opacity: 1;
+}
+
+#mu-trace {
+    z-index: 95;
 }
 
 .st1 {
@@ -117,7 +133,7 @@ footer {
     position: relative;
     margin: 0 auto;
     text-align: center;
-    top: 47vh;
+    top: 70vh;
     transition: all 2s ease-out;
 }
 
@@ -130,6 +146,7 @@ footer {
     margin-top: 4vh;
     font-size: 2vh;
     color: rgb(177, 100, 100);
+    line-height: 8vh;
 }
 
 footer a {
@@ -200,11 +217,6 @@ footer a:hover {
     }
 }
 
-.main-container-layout-before-scrolling .mu-after-load #left-arrow {
-    visibility: hidden;
-    opacity: 0;
-}
-
 
 
 .footer-after-load {
@@ -231,11 +243,6 @@ footer a:hover {
     height: 1800px;
     top: 0vh;
     left: -10vw;
-}
-
-.main-container-layout-after-scrolling #mu-container #left-arrow {
-    visibility: hidden;
-    opacity: 0;
 }
 
 .main-container-layout-after-scrolling article {
@@ -456,10 +463,6 @@ article section p {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100vw;
-}
-
-.mu-on-start #left-arrow {
-    opacity: 0;
 }
 
 .mu-on-start img {
