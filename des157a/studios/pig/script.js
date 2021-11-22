@@ -17,8 +17,10 @@
     const quitgameButton = document.getElementById('quitgame-button');
     let round = [0,0];
     let bkgColors = ['#7DA4DD','#EAA361'];
+    let totalScoreOfRound = 0;
+    let preScore = 0;
 
-    console.log(game) 
+    console.log(game);
 
 
     var gameData = {
@@ -65,7 +67,6 @@
     });
 
     function throwDice(idx){
-        
         showCurrentScore();
         console.log('roll the dice');
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
@@ -78,11 +79,11 @@
         if (gameData.rollSum === 2) {
             console.log('snake eyes are rolled');
             document.getElementById(`roll-${idx+1}`).innerText = 'Roll';
+            showCurrentScore();
             gameInstructions.innerText = `Oh Snap!!`;
             gameInstuctionPlayerName.innerText = 'Snake Eyes!!';
             gameData.score[idx] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            showCurrentScore();
             switchActive();
             setTimeout(function() {
                 gameInstructions.innerText = `Roll the Dice for`;
@@ -92,10 +93,13 @@
         }else if(gameData.roll1 === 1 || gameData.roll2 === 1){
             console.log('one of the two dice was a 1');
             document.getElementById(`roll-${idx+1}`).innerText = 'Roll';
+            gameData.score[idx] -= totalScoreOfRound;
+            totalScoreOfRound = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             gameInstructions.innerText = `Sorry, one of your rolls was a one, switching to`;
             gameInstuctionPlayerName.innerText = gameData.players[gameData.index];
             gameData.rollSum = 0;
+            showCurrentScore();
             switchActive();
             setTimeout(function() {
                 gameInstructions.innerText = `Roll the Dice for`;
@@ -103,12 +107,14 @@
             }, 2000);
         }else {
             console.log('the game proceeeds');
+            totalScoreOfRound += gameData.rollSum;
             document.getElementById(`roll-${idx+1}`).innerText = 'Roll Again'
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             document.getElementById(`roll-${idx+1}`).addEventListener('click', function() {
                 return;
             });
             document.getElementById(`pass-${idx+1}`).addEventListener('click', function() {
+                totalScoreOfRound = 0;
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 switchActive();
                 return;
