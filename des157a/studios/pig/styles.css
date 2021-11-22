@@ -22,6 +22,7 @@ main {
     grid-column-gap: 5vh;
     height: 100vh;
     padding: 5vh;
+    z-index: 5;
 }
 
 main > div {
@@ -269,7 +270,7 @@ main > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     padding: 4vw;
     background-color: white;
     opacity: 0.5;
@@ -386,3 +387,27 @@ main > div {
 .active #action-2 .roll:hover {
     background-color: #e9d417;
 }
+
+
+footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 4vh;
+    width: 100vw;
+    top: 96vh;
+    left: 0;
+    z-index: 50;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+

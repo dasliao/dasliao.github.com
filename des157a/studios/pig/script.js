@@ -5,25 +5,20 @@
     const main = document.querySelector('main');
     const startGame = document.getElementById('startgame');
     const playerInputLabel = document.querySelectorAll('.players label');
-    const gameControl = document.getElementById('gamecontrol');
     const game = document.getElementById('game');
+    const gameArea = document.querySelector('#game-area');
     const gameInstructions = document.querySelector('#instructions');
     const gameInstuctionPlayerName = document.querySelector('#instruction-player-name');
     const roundCounter = document.querySelector('#round-counter');
     const dice = document.getElementsByClassName('dice');
-    const score = document.getElementById('score');
-    const actionArea = document.getElementsByClassName('actions');
     const rollButton = document.getElementsByClassName('roll');
-    const gameInfo = document.querySelector('#gameinfo');
-    const gameTitle = document.querySelector('#gametitle');
     const gamePlayers = document.querySelectorAll('.players');
     const gamePlayersName = document.querySelectorAll('.players-name');
     const quitgameButton = document.getElementById('quitgame-button');
-    let controller = new AbortController();
-    let signal = controller.signal;
-    let round = [0,0]
+    let round = [0,0];
+    let bkgColors = ['#7DA4DD','#EAA361'];
 
-    console.log(game)
+    console.log(game) 
 
 
     var gameData = {
@@ -120,40 +115,6 @@
             });
             checkWinningCondition();
         }
-
-        // if (gameData.rollSum === 2) {
-        //     console.log('snake eyes are rolled');
-        //     gameInstructions.innerText = `Oh Snap!!`;
-        //     gameInstuctionPlayerName.innerText = 'Snake Eyes!!';
-        //     gameData.score[gameData.index] = 0;
-        //     gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        //     showCurrentScore();
-            
-        //     setTimeout(function() {
-        //         rollButton[1-gameData.index].addEventListener('click', throwDice);
-        //         setUpTurn();
-        //     }, 2000);
-        // }else if(gameData.roll1 === 1 || gameData.roll2 === 1){
-        //     console.log('one of the two dice was a 1');
-        //     gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        //     gameInstructions.innerText = `Sorry, one of your rolls was a one, switching to`;
-        //     gameInstuctionPlayerName.innerText = gameData.players[gameData.index];
-        //     gameData.rollSum = 0;
-        //     setTimeout(function() {
-        //         rollButton[1-gameData.index].addEventListener('click', throwDice);
-        //         setUpTurn();
-        //     }, 2000);
-        // }else {
-        //     console.log('the game proceeeds');
-        //     gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-        //     document.getElementById(`roll-${gameData.index+1}`).addEventListener('click', setUpTurn);
-        //     document.getElementById(`pass-${gameData.index+1}`).addEventListener('click', function() {
-        //         gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        //         rollButton[gameData.index].removeEventListener('click', throwDice);
-        //         setUpTurn();
-        //     });
-        //     checkWinningCondition();
-        // }
     }
 
     function setUpTurn() {
@@ -161,8 +122,6 @@
         switchActive();
         gameInstructions.innerText = `Roll the Dice for`;
         gameInstuctionPlayerName.innerText = gameData.players[gameData.index];
-        // rollButton[gameData.index].removeEventListener('click', throwDice);
-        // rollButton[gameData.index].addEventListener('click', throwDice);
         rollButton[0].addEventListener('click', function(){
             round[gameData.index]++;
             roundCounter.innerText = `Round ${round[gameData.index]}`;
@@ -204,6 +163,7 @@
 
     function switchActive() {
         gamePlayers[gameData.index].setAttribute('class', 'players active');
+        gameArea.style.backgroundColor = bkgColors[gameData.index];
         gamePlayers[1-gameData.index].setAttribute('class', 'players');
     }
 }());
