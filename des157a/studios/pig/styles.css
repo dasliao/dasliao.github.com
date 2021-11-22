@@ -37,7 +37,7 @@ main > div {
 #game-area {
     grid-area: b;
     background-color: #EEEDED;
-    padding: 8vh 5vh;
+    padding: 5vh 5vh;
 }
 
 #gameinfo {
