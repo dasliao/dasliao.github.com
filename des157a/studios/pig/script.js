@@ -111,14 +111,9 @@
             document.getElementById(`roll-${idx+1}`).innerText = 'Roll Again'
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             document.getElementById(`roll-${idx+1}`).addEventListener('click', function() {
-                return;
+                setUpTurn();
             });
-            document.getElementById(`pass-${idx+1}`).addEventListener('click', function() {
-                totalScoreOfRound = 0;
-                gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-                switchActive();
-                return;
-            });
+            pass(idx);
             checkWinningCondition();
         }
     }
@@ -171,5 +166,15 @@
         gamePlayers[gameData.index].setAttribute('class', 'players active');
         gameArea.style.backgroundColor = bkgColors[gameData.index];
         gamePlayers[1-gameData.index].setAttribute('class', 'players');
+    }
+
+
+    function pass(idx) {
+        document.getElementById(`pass-${idx+1}`).addEventListener('click', function() {
+            totalScoreOfRound = 0;
+            gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            switchActive();
+            return;
+        });
     }
 }());

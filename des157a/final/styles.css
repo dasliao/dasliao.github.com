@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#project-brief {
+    background-color: #EAA361;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+#project-brief main {
+    position: relative;
+    width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#project-brief header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: black;
+}
+
+#project-brief header h1 {
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+}
+
+
+#project-brief main section {
+    background-color: rgba(241, 241, 241, 0.9);
+    padding: 40px 50px;
+    margin: 5px 0;
+}
+
+#project-brief main section h2 {
+    text-transform: uppercase;
+    line-height: 2em
+}
+
+#project-brief main section p {
+    line-height: 2em;
+}
