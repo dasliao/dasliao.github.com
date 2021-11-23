@@ -23,6 +23,7 @@
     left: 0;
     margin: 0 auto;
     background-color: black;
+    z-index: 1000;
 }
 
 #project-brief header h1 {

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="game-area">
+            <div id="gameinfo">
+                <div id="gametitle">
+                    <h1>Game of PIG</h1>
+                    <p id='gamerules'>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's score of this turn will not count, and it is the other player’s turn. After each roll, the current player can either roll again to get a higher score, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player, (Remember! you can only pass game after two rolls except the first time you roll the dice.) and keep the scores they have now. The first player to get 30 points or higher wins.<br><br>Oh, and if you roll two "ones" (snake eyes), your the score gets zeroed out. So don’t do that.</p> 
+
+                    <p id="round-counter">Round 1</p>
+                    <p id="instructions">Roll the Dice for</p>
+                    <p id="instruction-player-name">Player 1</p>
+                </div>
+                <div id="gamecontrol">
+                    <div id="startgame">
+                        <h2>Start the Game</h2>
+                        <button id="startgame-button">Randomly Pick the First Player, and Start the Game</button>
+                    </div>
+                    <button id="quitgame-button">Wanna Quit?</button>
+                </div> 
+            </div>
+            <div id="game">
+                <img id="first-die" class="dice" src="images/1die.png" alt="first-die">
+                <img id="second-die" class="dice" src="images/2die.png" alt="second-die">
+            </div>
+        </div>
+
+        <div id="player-1" class="players">
+            <label for="player-1-input-name" class="label-inactive">Player One's Name</label>
+            <input type="text" id="player-1-input-name" class="input-names">
+            <div class='player-info'>
+                <h3 id='player-1-name' class="players-name">Player 1</h3>
+                <div id="score-1" class="scores">
+                    <h4 class="score-text">0/30</h4>
+                    <svg id="circle-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                        <circle class="circle-background" cx='50%' cy='50%' r='45%'/>
+                        <circle class="circle-progress" cx='50%' cy='50%' r='45%'/>
+                    </svg>
+                </div>
+            </div>
+            <div id="action-1" class="actions">
+                <button id="pass-1" class="pass">Pass</button>
+                <button id="roll-1" class="roll">Roll</button>
+            </div>
+        </div>
+        <div id="player-2" class="players">
+            <label for="player-2-input-name" class="label-inactive">Player Two's Name</label>
+            <input type="text" id="player-2-input-name" class="input-names">
+            <div class="player-info">
+                <h3 id='player-2-name' class="players-name">Player 2</h3>
+                <div id="score-2" class="scores">
+                    <h4 class="score-text">0/30</h4>
+                    <svg id="circle-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                        <circle class="circle-background" cx='50%' cy='50%' r='45%'/>
+                        <circle class="circle-progress" cx='50%' cy='50%' r='45%'/>
+                    </svg>
+                </div>
+            </div>
+            <div id="action-2" class="actions">
+                <button id="pass-2" class="pass">Pass</button>
+                <button id="roll-2" class="roll">Roll</button>
+            </div>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <a href="mailto:&#098;&#117;&#102;&#102;&#101;&#114;&#045;&#100;&#101;&#098;&#116;&#111;&#114;&#046;&#048;&#064;&#105;&#099;&#108;&#111;&#117;&#100;&#046;&#099;&#111;&#109;">Email</a>
+        <a href="https://validator.w3.org/check?uri=https://dasliao.github.io/des157a/studios/pig/">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://dasliao.github.io/des157a/studios/pig/">Valid CSS</a>
+    </footer>
+
+
+</body>
+</html>

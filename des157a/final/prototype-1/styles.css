@@ -1,0 +1,413 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.5em;
+    min-width: 1360px;
+    min-height: 768px;
+}
+
+button { 
+    padding: 10px;
+}
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas: 'a b c';
+    grid-column-gap: 5vh;
+    height: 100vh;
+    padding: 5vh;
+    z-index: 5;
+}
+
+main > div {
+    position: relative;
+    border-radius: 5vh;
+    height: 100%;
+    padding: 0 5vh;
+    margin: 0;
+    text-align: center;
+}
+
+#game-area {
+    grid-area: b;
+    background-color: #EEEDED;
+    padding: 5vh 5vh;
+}
+
+#gameinfo {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#gametitle {
+    padding: 0 2vw;
+}
+
+#gametitle h1 {
+    font-size: 6vh;
+    font-weight: 300;
+    margin-bottom: 6vh;
+}
+
+#gamerules {
+    text-align: left;
+    font-size: 1.5vh;
+    line-height: 4vh;
+}
+
+#round-counter {
+    height: 3vh;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 2vh;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 2vh;
+    line-height: 2.5vh;
+}
+
+#instructions {
+    font-size: 2vh;
+    line-height: 1;
+    margin: 10vh 0 2vh 0;
+}
+
+#instruction-player-name {
+    font-size: 5vh;
+    margin: 0 0 10vh 0;
+}
+
+#startgame h2 {
+    font-size: 2vh;
+}
+
+#startgame-button, #quitgame-button {
+    border: none;
+    border-radius: 2vh;
+    padding: 1vh 2vh;
+    color: white;
+    background-color: #606060;
+    cursor: pointer;
+    line-height: 2vh;
+    transition: background-color 500ms ease-in-out;
+}
+
+#startgame-button:hover, #quitgame-button:hover {
+    background-color: black;
+}
+
+#quitgame-button {
+    margin: 0 auto;
+    padding: 1vh 5vh;
+}
+
+#game {
+    justify-content: space-evenly;
+    height: 30vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#game img {
+    width: 115px;
+    height: 115px;
+}
+
+#player-1 {
+    grid-area: a;
+    background-color: #7DA4DD;
+}
+
+#player-2 {
+    grid-area: c;
+    background-color: #EAA361;
+}
+
+#game, .players .player-info, .players .actions, #quitgame-button, #round-counter, #instruction-player-name, #instructions{
+    display: none;
+}
+
+
+/* Player Name Inputing Area */
+.players label, .players input {
+    cursor: pointer;
+}
+
+.players label {
+    font-size: 2vh;
+    transition: all 200ms ease-in-out;
+}
+
+.players .label-inactive {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.players .label-active {
+    position: absolute;
+    top: 45%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: white;
+    font-size: 1.5vh;
+}
+
+#player-1 .label-inactive {
+    color: #7DA4DD7e;
+}
+
+#player-1 .label-inactive:hover {
+    color: #7DA4DDe0;
+}
+
+#player-2 .label-inactive {
+    color: #EAA3617e;
+}
+
+#player-2 .label-inactive:hover {
+    color: #EAA361e0;
+}
+
+
+.players input {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    height: 5vh;
+    width: 15vw !important;
+    border-radius: 2vh;
+    border: none;
+    text-align: center;
+}
+
+
+/* After Game Started!!!
+ Hide input boxes and rules;
+ Adjust the background layout;
+ Adjust Game Area;
+ Change the visibility of player info;
+ */
+
+.game-started {
+    padding: 0;
+    grid-column-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-started > div {
+    border-radius: 0;
+    padding: 5vh;
+}
+
+.game-started #game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-started #gameinfo {
+    height: 55vh;
+    border-radius: 5vh;
+    background-color: white;
+    padding: 5vh 0;
+}
+
+.game-started #gametitle h1 {
+    font-size: 4.5vh;
+    margin-bottom: 2vh;
+}
+
+.game-started .players label, .game-started .players input, .game-started #startgame, .game-started #gamerules{
+    display: none;
+}
+
+.game-started #quitgame-button, .game-started #round-counter, .game-started #instructions, .game-started #instruction-player-name {
+    display: block;
+}
+
+.game-started .players .player-info, .game-started #game, .game-started .players .actions {
+    display: flex;
+} 
+
+/* Player infomation and score area */
+.game-started .players {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.player-info {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    border-radius: 5vh;
+    background-color: white;
+}
+
+.actions {
+    position: relative;
+    height: 30vh;
+    border-radius: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 4vw;
+    background-color: white;
+    opacity: 0.5;
+    transition: opacity 500ms ease-out;
+    pointer-events: none;
+}
+
+.active .actions {
+    opacity: 1;
+    pointer-events:stroke;
+}
+
+.player-info .players-name {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 0;
+}
+
+
+.player-info .scores {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.scores h4 {
+    line-height: 0;
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.scores svg {
+    position: absolute;
+    height: 25vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.scores svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: all 1s ease-in-out;
+}
+
+.scores svg .circle-progress {
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70;
+    z-index: 100;
+}
+
+#circle-1 .circle-progress {
+    stroke: #7DA4DD;
+}
+
+#circle-2 .circle-progress {
+    stroke: #EAA361;
+}
+
+.scores svg .circle-background {
+    stroke: rgb(230, 230, 230);
+    z-index: 50;
+}
+
+.actions button {
+    width: 20vw;
+    height: 10vh;
+    margin: 1vh;
+    border-radius: 2vh;
+    border: none;
+    color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 500ms ease-in-out;
+}
+
+.active button {
+    cursor: pointer;
+}
+
+.actions .pass {
+    background-color: #606060;
+}
+
+.active .actions .pass:hover {
+    background-color: black;
+}
+
+#action-1 .roll {
+    background-color: #7DA4DD;
+}
+
+.active #action-1 .roll:hover {
+    background-color: #3ed1eb;
+}
+
+#action-2 .roll {
+    background-color: #EAA361;
+}
+
+.active #action-2 .roll:hover {
+    background-color: #e9d417;
+}
+
+
+footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 4vh;
+    width: 100vw;
+    top: 96vh;
+    left: 0;
+    z-index: 50;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
