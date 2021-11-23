@@ -38,13 +38,28 @@
     background-color: rgba(241, 241, 241, 0.9);
     padding: 40px 50px;
     margin: 5px 0;
+    text-align: center;
 }
 
 #project-brief main section h2 {
+    text-align: left;
     text-transform: uppercase;
     line-height: 2em
 }
 
 #project-brief main section p {
+    text-align: left;
     line-height: 2em;
+}
+
+#project-brief main section a {
+    text-decoration: none;
+    color: cadetblue;
+    text-align: center;
+    padding: 10px;
+}
+
+#project-brief main section img {
+    border-radius: 25px;
+    margin: 20px 0;
 }
