@@ -12,67 +12,161 @@
 	<link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <div id="game-area">
-            <div id="gameinfo">
-                <div id="gametitle">
-                    <h1>Game of PIG</h1>
-                    <p id='gamerules'>There are Four delivery trucks. Each of the players chose one truck icon. The player whose turn it is spin the numbers. The total of the spin is added to the current player's score, unless either die comes up as a "one". If this happens, this player's score of this turn will not count, and it is the other player’s turn. After each roll, the current player can either roll again to get a higher score, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player, (Remember! you can only pass game after two rolls except the first time you roll the dice.) and keep the scores they have now. The first player to get 30 points or higher wins.<br><br>Oh, and if you roll two "ones" (snake eyes), your the score gets zeroed out. So don’t do that.</p> 
-                    <p id="round-counter">Round 1</p>
-                    <p id="instructions">Roll the Dice for</p>
-                    <p id="instruction-player-name">Player 1</p>
+    <main> 
+        <div id="game-intro">
+            <h1 id="gametitle">Boost Your Delivery</h1>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="intro-background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+                <g id="purple">
+                    <path class="st0 lines" d="M1209,396H0v40h1209c11,0,20-9,20-20S1220,396,1209,396z"/>
+                </g>
+                <g id="orange">
+                    <path class="st1 lines" d="M725,535c-11,0-20,9-20,20s9,20,20,20h642v-40H725z"/>
+                </g>
+                <g id="green">
+                    <path class="st2 lines" d="M71,646c-5.1,0-10.2-2-14.1-5.9c-7.8-7.8-7.8-20.5,0-28.3l364-364c7.8-7.8,20.5-7.8,28.3,0s7.8,20.5,0,28.3
+                        l-364,364C81.2,644,76.1,646,71,646z"/>
+                </g>
+                <path id="blue" class="st3 lines" d="M1060,666c-11,0-20-9-20-20V-76c0-11,9-20,20-20s20,9,20,20v722C1080,657,1071,666,1060,666z"/>
+                <path id="Truck-4" class="st4 truck" d="M649.8,364.3h-61.2c-3.1,0-5.6,3.2-5.6,7.2V398c0,4,2.5,7.2,5.6,7.2h61.2c3.1,0,5.6-3.2,5.6-7.2
+                v-26.5C655.4,367.5,652.9,364.3,649.8,364.3z M631.9,401c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7v-32.1c0-0.4,0.3-0.7,0.7-0.7
+                c0.4,0,0.7,0.3,0.7,0.7V401z M649.7,385.1c0,1.2-0.7,2.1-1.6,2.1h-9.5c-0.9,0-1.6-1-1.6-2.1v-12.6c0-1.2,0.7-2.1,1.6-2.1h9.5
+                c0.9,0,1.6,1,1.6,2.1V385.1z"/>
+                <path id="Truck-3" class="st5 truck" d="M779.4,377.4l-21.8-12.5c-1.1-0.6-2.3-0.9-3.5-0.9l-39.2-0.1c-4,0-7.2,3.2-7.2,7.2v26.5
+                c0,4,3.2,7.2,7.2,7.2h61.1c4,0,7.2-3.2,7.2-7.2v-13.9C783,381.1,781.7,378.7,779.4,377.4z M747,400.3c0,0.4-0.3,0.7-0.7,0.7
+                c-0.4,0-0.7-0.3-0.7-0.7v-31.9c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7V400.3z M775.7,385.8c0,2.8-2.2,5-5,5h-14.1
+                c-2.8,0-5-2.2-5-5v-9.3c0-3.9,4.3-6.3,7.6-4.3l14.1,8.5c1.5,0.9,2.4,2.5,2.4,4.3V385.8z"/>
+                <path id="Truck-2" class="st6 truck" d="M909.5,391.7L882.8,365c-1.3-1.3-3.2-2.1-5.1-2.1h-39.1c-4,0-7.2,3.2-7.2,7.2v26.4
+                c0,3.9,3.2,7.2,7.1,7.2l65.8,0.3C910.8,404,914,396.2,909.5,391.7z M869.5,399.3c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7
+                v-31.9c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7V399.3z M894.2,397.3h-14.1c-2.7,0-4.9-2.2-4.9-4.9v-13.1c0-4.3,5.1-6.5,8.3-3.6
+                l14.1,13.1C900.8,391.8,898.6,397.3,894.2,397.3z"/>
+                <path id="Truck-1" class="st7 truck" d="M529.5,381.3l-15.9-15.9c-1.3-1.3-3.2-2.1-5.1-2.1h-10.3c-4,0-7.2,3.2-7.2,7.2v3
+                c0,4-3.2,7.2-7.2,7.2h-22.3c-4,0-7.2,3.2-7.2,7.2v8.9c0,4,3.2,7.2,7.2,7.2h62.8c4,0,7.2-3.2,7.2-7.2v-10.4
+                C531.6,384.5,530.8,382.7,529.5,381.3z M490.7,399.3c0,0.4-0.3,0.7-0.7,0.7s-0.7-0.3-0.7-0.7v-15.6c0-0.4,0.3-0.7,0.7-0.7
+                s0.7,0.3,0.7,0.7V399.3z M513,382.7h-12.5c-2.2,0-4-1.8-4-4v-4.8c0-2.2,1.8-4,4-4h7.7c1,0,2.1,0.4,2.8,1.2l4.8,4.8
+                C518.3,378.4,516.5,382.7,513,382.7z"/>
+            </svg>
+            <div id="overlay-background"></div>
+            <div id="gamerules" class="overlays">
+                <h2>Boost Your Delivery</h2>
+                <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 600miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. ( You can spin a maximum of three times. If you reach the limit, the last spin will count into the current round.)<br>2. You think you are out of luck and just wanna fill 50 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 600 miles.<br><br>Oh, and If all three numbers are 0, the truck will break and return to the starting point. So don't do that.</p>
+                <button>I Got It.</button>             
+            </div>
+            <div id="choose-number-of-players" class="overlays">
+                <h3 >How Many Players Are Playing?</h3>
+                <div id="choose-truck">
+                    <img src="images/Truck-2.svg" alt="2" width="100px">
+                    <img src="images/Truck-3.svg" alt="3" width="100px">
+                    <img src="images/Truck-4.svg" alt="4" width="100px">
                 </div>
-                <div id="gamecontrol">
-                    <div id="startgame">
-                        <h2>Start the Game</h2>
-                        <button id="startgame-button">Randomly Pick the First Player, and Start the Game</button>
+                <div id="players-amount-text"><p>2</p><p>3</p><p>4</p></div>
+                <button id="players-amount-confirm">Done</button>
+            </div>
+            <div id="bottom-btns">
+                <button id="gamerule-button">How to Play?</button>
+                <button id="number-of-players"># of Players?</button>
+                <button id="startgame-button">Randomly Pick the First Player, and Start the Game</button>
+            </div>
+        </div>
+        
+        <div id="the-game" class="numberofplayers-2">
+            <div id="col-1" class="cols">
+                <div id="players" >
+                    <div id="player-1" class="players-info">
+                        <h3 id="player-1-name" class="players-name">Player 1</h3>
+                        <p id="player-1-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-1-percentage" class="percentage">0%</p>
                     </div>
-                    <button id="quitgame-button">Wanna Quit?</button>
-                </div> 
-            </div>
-            <div id="game">
-                <img id="first-die" class="dice" src="images/1die.png" alt="first-die">
-                <img id="second-die" class="dice" src="images/2die.png" alt="second-die">
-            </div>
-        </div>
-
-        <div id="player-1" class="players">
-            <label for="player-1-input-name" class="label-inactive">Player One's Name</label>
-            <input type="text" id="player-1-input-name" class="input-names">
-            <div class='player-info'>
-                <h3 id='player-1-name' class="players-name">Player 1</h3>
-                <div id="score-1" class="scores">
-                    <h4 class="score-text">0/30</h4>
-                    <svg id="circle-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                        <circle class="circle-background" cx='50%' cy='50%' r='45%'/>
-                        <circle class="circle-progress" cx='50%' cy='50%' r='45%'/>
-                    </svg>
+                    <div id="player-2" class="players-info">
+                        <h3 id="player-2-name" class="players-name">Player 2</h3>
+                        <p id="player-2-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-2-percentage" class="percentage">0%</p>
+                    </div>
+                    <div id="player-3" class="players-info">
+                        <h3 id="player-3-name" class="players-name">Player 3</h3>
+                        <p id="player-3-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-3-percentage" class="percentage">0%</p>
+                    </div>
+                    <div id="player-4" class="players-info">
+                        <h3 id="player-4-name" class="players-name">Player 4</h3>
+                        <p id="player-4-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-4-percentage" class="percentage">0%</p>
+                    </div>
                 </div>
-            </div>
-            <div id="action-1" class="actions">
-                <button id="pass-1" class="pass">Pass</button>
-                <button id="roll-1" class="roll">Roll</button>
-            </div>
-        </div>
-        <div id="player-2" class="players">
-            <label for="player-2-input-name" class="label-inactive">Player Two's Name</label>
-            <input type="text" id="player-2-input-name" class="input-names">
-            <div class="player-info">
-                <h3 id='player-2-name' class="players-name">Player 2</h3>
-                <div id="score-2" class="scores">
-                    <h4 class="score-text">0/30</h4>
-                    <svg id="circle-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                        <circle class="circle-background" cx='50%' cy='50%' r='45%'/>
-                        <circle class="circle-progress" cx='50%' cy='50%' r='45%'/>
-                    </svg>
+                <div id="col-1-control">
+                    <button id="quitgame-button">WANNA QUIT?</button>
+                    <button id="restart-game" class="gamecontrols">RESTART</button>
                 </div>
-            </div>
-            <div id="action-2" class="actions">
-                <button id="pass-2" class="pass">Pass</button>
-                <button id="roll-2" class="roll">Roll</button>
             </div>
             
+            <div id="col-2" class="cols">
+                <div id="progress">
+                    <div id="player-1-progress" class="players-progress-area">
+                        <img id="player-icon-1" class="players-icon" src="images/Truck-1.svg" alt="player-icon-1">
+                        <svg id="circle-1" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-2-progress" class="players-progress-area">
+                        <img id="player-icon-2" class="players-icon" src="images/Truck-2.svg" alt="player-icon-2">
+                        <svg id="circle-2" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-3-progress" class="players-progress-area">
+                        <img id="player-icon-3" class="players-icon" src="images/Truck-3.svg" alt="player-icon-3">
+                        <svg id="circle-3" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-4-progress" class="players-progress-area">
+                        <img id="player-icon-4" class="players-icon" src="images/Truck-4.svg" alt="player-icon-4">
+                        <svg id="circle-2" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                </div>
+                <button id="restart-game" class="gamecontrols"><img src="images/sound.svg" alt="Sound Icon" width="30px"></button>
+            </div>
+    
+            <div id="col-3" class="cols">
+                <div id="gameinfo">
+                    <h2>Boost Your Delivery</h2>
+                    <div id="spinning-numbers">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                </div>
+                <div id="game-area">
+                    <div id="game-instructions">
+                        <p id="instruction-fill-gas-for">FILL SOME GAS FOR</p>
+                        <p id="current-player-name">Player 1</p>
+                    </div>
+                    <div id="game-control">
+                        <button id="btn-pass" class="actions-btn">PASS</button>
+                        <button id="btn-spin" class="actions-btn">SPIN</button>
+                        <button id="btn-50" class="actions-btn">+50</button>
+                        <button id="btn-fill" class="actions-btn">
+                            <svg id="pump-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.13 60.18" width: 100px; height: 100px;>
+                                <g id="pump">
+                                    <path class="pump" d="M34.13,45.72l-4.8-10.41A1.45,1.45,0,0,0,28,34.47H25.89a3.55,3.55,0,0,1-2.51-6.07l3.72-3.73a3.57,3.57,0,0,1,5,0l4.6,4.6V10.61A10.61,10.61,0,0,0,26.13,0H10.61A10.61,10.61,0,0,0,0,10.61v39A10.61,10.61,0,0,0,10.61,60.18H26.13A10.61,10.61,0,0,0,36.74,49.56V47.73h0A3.59,3.59,0,0,1,34.13,45.72ZM5.91,12.2a7,7,0,0,1,7-7h11a7,7,0,0,1,0,14h-11A7,7,0,0,1,5.91,12.2Z"/>
+                                    <path class="pump" d="M56.11,30.49c-2.52-7.14-9.64-14.42-17.25-18.22v4.82c5.92,3.51,11.3,9.29,13.25,14.82,1.22,3.45,1,6.31-.67,8.5a7.06,7.06,0,0,1-5.52,2.43,4.35,4.35,0,0,1-1.69-.45l-3,3a8.1,8.1,0,0,0,4.52,1.65h.48A11.3,11.3,0,0,0,54.81,43C57.37,39.63,57.82,35.31,56.11,30.49Z"/>
+                                    <path class="pump" d="M43,40.59l-4.19,4.18-.46.47a1.45,1.45,0,0,1-1.28.4,1.48,1.48,0,0,1-1.06-.81L31.26,34.41A3.57,3.57,0,0,0,28,32.35H25.89a1.4,1.4,0,0,1-1.32-.89,1.44,1.44,0,0,1,.3-1.57l3.73-3.71a1.38,1.38,0,0,1,1-.43,1.37,1.37,0,0,1,1,.43l8.21,8.21L43,38.55A1.47,1.47,0,0,1,43,40.59Z"/>
+                                </g>
+                            </svg>
+                            FILL</button>
+                    </div>
+                </div> 
+            </div>
         </div>
+        
     </main>
     
     <footer>
