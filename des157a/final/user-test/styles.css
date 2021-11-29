@@ -49,8 +49,14 @@ main {
     display: none;
 }
 
+#gamerules {
+    display: none;
+}
+
+
+
 /* User Testing */
-#user-test {
+#user-test, #gamerules{
     position: absolute;
     z-index: 99999;
     width: 100vw;
@@ -61,7 +67,7 @@ main {
     background-color: #00000079;
 }
 
-#user-test div {
+#user-test div, #gamerules div{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -75,11 +81,11 @@ main {
     border-radius: 3vh;
 }
 
-#user-test div p {
+#user-test div p, #gamerules div p{
     line-height: 1.5em;
 }
 
-#user-test button {
+#user-test button, #gamerules button{
     margin: 0 10px;
     padding: 10px 50px;
     border: 2px solid black;
@@ -90,12 +96,24 @@ main {
     transition: all 500ms ease-in-out;
 }
 
-#user-test button:hover, #user-test-button:hover {
+#user-test button:hover, #user-test-button:hover, #gamerules button:hover, #gamerules-button:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 
-#user-test-button {
+#side-buttons {
+    position: absolute;
+    top: 10vh;
+    left: 20px;
+    height: 30vh;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user-test-button, #gamerules-button {
+    transform: rotate(-90deg);
     margin: 0 10px;
     padding: 15px 25px;
     border: 2px solid black;
@@ -103,11 +121,6 @@ main {
     background-color: black;
     color: white;
     transition: all 500ms ease-in-out;
-    position: absolute;
-    transform: rotate(-90deg);
-    top: 10vh;
-    left: 20px;
-    z-index: 2000;
 }
 
 
@@ -144,10 +157,10 @@ main {
     border: 2px solid black;
 }
 
-#gamerules {
+/* #gamerules {
     text-align: left;
     z-index: 9999;
-}
+} */
 
 #choose-number-of-players {
     display: flex;
@@ -209,7 +222,7 @@ main {
     z-index: 99;
 }
 
-#gamerules, #overlay-background, #choose-number-of-players{
+#overlay-background, #choose-number-of-players{
     display: none;
     /* whenever the overlay is clicked, overlay-background should be displayed */
 }
@@ -261,15 +274,16 @@ main {
     color: black;
 }
 
-#game-intro #gamerule-button {
+
+/* #game-intro #gamerule-button {
     background-color: rgb(100, 100, 100);
     border: 2px solid rgb(100, 100, 100);
-}
+} */
 
-#game-intro #gamerule-button:hover {
+/* #game-intro #gamerule-button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(100, 100, 100);
-}
+} */
 
 
 

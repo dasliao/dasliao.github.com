@@ -13,13 +13,25 @@
 </head>
 <body>
     <main> 
-        <button id="user-test-button">Test Menu</button>
+        <div id="side-buttons">
+            <button id="user-test-button">Test Menu</button>
+            <button id="gamerules-button">Game Rules</button>
+        </div>
+
         <div id="user-test">
             <div>
                 <h2>Boost Your Delivery - User Test</h2>
-                <p id='user-test-text'>Hello, and welcome to the User Testing of my game, Boost Your Delivery. I hope you enjoy the game, and I would love to hear any suggestions from you.<br><br>There are some tasks I would like you to perform:<br><br><strong> Read through the game rules; Choose the number of players; Start the game; You can play the game as the way you like; After you finish the game, you can quit the game.</strong><br><br><strong>2. Try to start the game without choosing the number of players; Start a 3-4 players game; This time you will need to use at least two spin, two +10, 1 Pass. After finish the game, Don't quit the game.</strong><br><br><strong>3. Use restart button to restart the game. Try to player the game halfway, and restart the game.</strong><br><br>Thank you so much.<br><br>Oh, you can ALWAYS revisit the Test Menu by clicking the button on the left side.</p>
+                <p id='user-test-text'>Hello, and welcome to the User Testing of my game, Boost Your Delivery. I hope you enjoy the game, and I would love to hear any suggestions from you.<br><br>There are some tasks I would like you to perform:<br><br><strong>1. Reading the Game Rules.</strong><br><br><strong>2. Start a 2 players game.</strong><br><br><strong>3. Use restart button to restart the game. </strong><br><br><strong>4. Explore the sound effects of clicking each button. </strong><br><br>Thank you so much.<br><br><strong>Oh, you can ALWAYS revisit the Test Menu by clicking the button on the left side.</strong></p>
                 <button id="confirmed-user-test">I Got It.</button>
             </div>
+        </div>
+        
+        <div id="gamerules">
+            <div>
+                <h2>Boost Your Delivery</h2>
+                <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 100 miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. <strong>(You can spin as many time as you want. If you like the score, click FILL to store the scores from this round.)</strong><br>2. You think you are out of luck and just wanna fill 10 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 100 miles.<br><br>Oh, and if two or more numbers are 1, the truck will break and return to the starting point. So don't do that.</p>
+                <button id="confirmed-gamerules">I Got It.</button>  
+            </div>           
         </div>
         <div id="audio-area">
             <audio id="audio-start">
@@ -89,11 +101,11 @@
                 C518.3,378.4,516.5,382.7,513,382.7z"/>
             </svg>
             <div id="overlay-background"></div>
-            <div id="gamerules" class="overlays">
+            <!-- <div id="gamerules" class="overlays">
                 <h2>Boost Your Delivery</h2>
                 <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 100 miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. <strong>(You can spin as many time as you want. If you like the score, click FILL to store the scores from this round.)</strong><br>2. You think you are out of luck and just wanna fill 10 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 100 miles.<br><br>Oh, and if two or more numbers are 1, the truck will break and return to the starting point. So don't do that.</p>
                 <button>I Got It.</button>             
-            </div>
+            </div> -->
             <div id="choose-number-of-players" class="overlays">
                 <h3 >How Many Players Are Playing?</h3>
                 <div id="choose-truck">
@@ -105,7 +117,6 @@
                 <button id="players-amount-confirm">Done</button>
             </div>
             <div id="bottom-btns">
-                <button id="gamerule-button">How to Play?</button>
                 <button id="number-of-players"># of Players?</button>
                 <button id="startgame-button">Randomly Pick the First Player, and Start the Game</button>
             </div>

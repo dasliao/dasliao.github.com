@@ -12,7 +12,7 @@
     console.log(playersColor);
     
     const gameIntro = document.querySelector('#game-intro');
-    const gameRules = document.querySelector('#gamerules');
+    // const gameRules = document.querySelector('#gamerules');
     const choosenumOfPs = document.querySelector('#choose-number-of-players');
     const numOfPsBtn = document.querySelector('#number-of-players');
     const chooseTruckIcons = document.querySelectorAll('#choose-truck img');
@@ -75,13 +75,23 @@
         document.querySelector('#user-test').style.display = '';
     });
 
+    document.querySelector('#confirmed-gamerules').addEventListener('click',function(){
+        audioGamerule.play();
+        document.querySelector('#gamerules').style.display = 'none';
+    });
+
+    document.querySelector('#gamerules-button').addEventListener('click',function(){
+        audioGamerule.play();
+        document.querySelector('#gamerules').style.display = 'block';
+    });
+
 
     // Intro Event Listener
-    document.querySelector('#gamerule-button').addEventListener('click', function() {
-        gameRules.style.display = 'block';
-        overlayBackground.style.display = 'block';
-        audioGamerule.play();
-    });
+    // document.querySelector('#gamerule-button').addEventListener('click', function() {
+    //     gameRules.style.display = 'block';
+    //     overlayBackground.style.display = 'block';
+    //     audioGamerule.play();
+    // });
 
     numOfPsBtn.addEventListener('click', function() {
         choosenumOfPs.style.display = 'block';
@@ -89,11 +99,11 @@
         audioOthers.play();
     });
 
-    document.querySelector('#gamerules button').addEventListener('click', function(){
-        audioGamerule.play();
-        gameRules.style.display = 'none';
-        overlayBackground.style.display = 'none';
-    });
+    // document.querySelector('#gamerules button').addEventListener('click', function(){
+    //     audioGamerule.play();
+    //     gameRules.style.display = 'none';
+    //     overlayBackground.style.display = 'none';
+    // });
     
     chooseTruckIcons.forEach(function(icon){
         icon.addEventListener('click', function(e){
