@@ -12,6 +12,10 @@
     const confirmPlayers = document.querySelector('#players-amount-confirm');
     const overlayBackground = document.querySelector('#overlay-background');
     const startGameBtn = document.querySelector('#startgame-button');
+    const quitGame = document.querySelector('#quitgame-button');
+    const restart = document.querySelector('#restart-game');
+    const mute = document.querySelector('#mute-button');
+    
 
 
     const game = document.querySelector("#the-game");
@@ -77,8 +81,20 @@
                 confirmPlayers.style.border = '';
             });
         }
+    });
+
+    mute.addEventListener('click', function(){
+        if (mute.className === 'gamecontrols unmuted') {
+            mute.innerHTML = '<img src="images/sound.svg" alt="Sound Icon" width="30px">UMMUTE';
+            mute.className = 'gamecontrols muted';
+        }else {
+            mute.innerHTML = '<img src="images/sound.svg" alt="Sound Icon" width="30px">MUTE';
+            mute.className = 'gamecontrols unmuted';
+        }
         
     });
+
+
 
 
 

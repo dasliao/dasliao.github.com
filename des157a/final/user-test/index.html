@@ -13,6 +13,46 @@
 </head>
 <body>
     <main> 
+        <button id="user-test-button">Test Menu</button>
+        <div id="user-test">
+            <div>
+                <h2>Boost Your Delivery - User Test</h2>
+                <p id='user-test-text'>Hello, and welcome to the User Testing of my game, Boost Your Delivery. I hope you enjoy the game, and I would love to hear any suggestions from you.<br><br>There are some tasks I would like you to perform:<br><br><strong> Read through the game rules; Choose the number of players; Start the game; You can play the game as the way you like; After you finish the game, you can quit the game.</strong><br><br><strong>2. Try to start the game without choosing the number of players; Start a 3-4 players game; This time you will need to use at least two spin, two +10, 1 Pass. After finish the game, Don't quit the game.</strong><br><br><strong>3. Use restart button to restart the game. Try to player the game halfway, and restart the game.</strong><br><br>Thank you so much.<br><br>Oh, you can ALWAYS revisit the Test Menu by clicking the button on the left side.</p>
+                <button id="confirmed-user-test">I Got It.</button>
+            </div>
+        </div>
+        <div id="audio-area">
+            <audio id="audio-start">
+                <source src="audios/start.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-gamerule">
+                <source  src="audios/gamerule.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-spin">
+                <source src="audios/spin.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-others">
+                <source src="audios/others.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-fill">
+                <source src="audios/fill.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-50">
+                <source src="audios/50.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-pass">
+                <source src="audios/pass.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-restart">
+                <source src="audios/restart.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-ut">
+                <source src="audios/user-test.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-error">
+                <source src="audios/error.mp3" type="audio/mpeg">
+            </audio>
+        </div>
         <div id="game-intro">
             <h1 id="gametitle">Boost Your Delivery</h1>
             <?xml version="1.0" encoding="utf-8"?>
@@ -51,7 +91,7 @@
             <div id="overlay-background"></div>
             <div id="gamerules" class="overlays">
                 <h2>Boost Your Delivery</h2>
-                <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 600miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. ( You can spin a maximum of three times. If you reach the limit, the last spin will count into the current round.)<br>2. You think you are out of luck and just wanna fill 50 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 600 miles.<br><br>Oh, and If all three numbers are 0, the truck will break and return to the starting point. So don't do that.</p>
+                <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 100 miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. <strong>(You can spin as many time as you want. If you like the score, click FILL to store the scores from this round.)</strong><br>2. You think you are out of luck and just wanna fill 10 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 100 miles.<br><br>Oh, and if two or more numbers are 1, the truck will break and return to the starting point. So don't do that.</p>
                 <button>I Got It.</button>             
             </div>
             <div id="choose-number-of-players" class="overlays">
@@ -76,22 +116,22 @@
                 <div id="players" >
                     <div id="player-1" class="players-info">
                         <h3 id="player-1-name" class="players-name">Player 1</h3>
-                        <p id="player-1-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-1-delivery-info" class="delivery-info">The shipping label was created</p>
                         <p id="player-1-percentage" class="percentage">0%</p>
                     </div>
                     <div id="player-2" class="players-info">
                         <h3 id="player-2-name" class="players-name">Player 2</h3>
-                        <p id="player-2-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-2-delivery-info" class="delivery-info">The shipping label was created</p>
                         <p id="player-2-percentage" class="percentage">0%</p>
                     </div>
                     <div id="player-3" class="players-info">
                         <h3 id="player-3-name" class="players-name">Player 3</h3>
-                        <p id="player-3-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-3-delivery-info" class="delivery-info">The shipping label was created</p>
                         <p id="player-3-percentage" class="percentage">0%</p>
                     </div>
                     <div id="player-4" class="players-info">
                         <h3 id="player-4-name" class="players-name">Player 4</h3>
-                        <p id="player-4-delivery-info" class="delivery-info">The Shipping Label was Created.</p>
+                        <p id="player-4-delivery-info" class="delivery-info">The shipping label was created</p>
                         <p id="player-4-percentage" class="percentage">0%</p>
                     </div>
                 </div>
@@ -139,9 +179,9 @@
                 <div id="gameinfo">
                     <h2>Boost Your Delivery</h2>
                     <div id="spinning-numbers">
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
+                        <p class="the-numbers">0</p>
+                        <p class="the-numbers">0</p>
+                        <p class="the-numbers">0</p>
                     </div>
                 </div>
                 <div id="game-area">
@@ -152,7 +192,7 @@
                     <div id="game-control">
                         <button id="btn-pass" class="actions-btn">PASS</button>
                         <button id="btn-spin" class="actions-btn">SPIN</button>
-                        <button id="btn-50" class="actions-btn">+50</button>
+                        <button id="btn-10" class="actions-btn">+10</button>
                         <button id="btn-fill" class="actions-btn">
                             <svg id="pump-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.13 60.18" width: 100px; height: 100px;>
                                 <g id="pump">
