@@ -1,65 +1,689 @@
 * {
+    box-sizing:border-box;
+}
+
+.st0{fill:#EDAA6C;}
+.st1{fill:#CCA8EF;}
+.st2{fill:#AFBD85;}
+.st3{fill:#87AFEC;}
+#truck-4{fill:#87AFEC;}
+#truck-3{fill:#EDAA6C;}
+#truck-2{fill:#CCA8EF;}
+#truck-1{fill:#AFBD85;}
+.pump{fill: white;}
+
+
+/* Setting Variables, easier to change when player changes */
+:root {
+    --player-1-color: #AFBD85;
+    --player-2-color: #EDAA6C;
+    --player-3-color: #87AFEC;
+    --player-4-color: #CCA8EF;
+    --current-player-color: var(--player-1-color);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5em;
+    min-width: 1360px;
+    min-height: 768px;
+}
+
+
+h1 {
+    margin-top: 0;
+}
+
+button { 
+    padding: 10px;
+    cursor: pointer;
+}
+
+main {
+    position: relative;
     margin: 0;
     padding: 0;
 }
 
-#project-brief {
-    background-color: #EAA361;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+#aduio-area {
+    display: none;
+}
+
+#gamerules {
+    display: none;
+}
+
+#side-buttons {
+    position: absolute;
+    top: 5vh;
+    left: 4vw;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user-test-button, #gamerules-button {
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    transition: all 500ms ease-in-out;
+}
+
+#user-test-button {
+    margin-bottom: 20px;
+}
+
+/* User Testing & Game Rules*/
+#user-test, #gamerules{
+    position: absolute;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 5vh 30vw;
+    background-color: #00000079;
+}
+
+#user-test div, #gamerules div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5vh 8vh;
+    border-radius: 3vh;
+}
+
+#user-test div p, #gamerules div p{
+    line-height: 1.5em;
+}
+
+#user-test button, #gamerules button{
+    margin: 0 10px;
+    padding: 10px 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+#user-test button:hover, #user-test-button:hover, #gamerules button:hover, #gamerules-button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+/* Game Intro */
+#game-intro {
+    /* display: none; */
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 1366px;
+    min-height: 768px;
+}
+
+
+#gametitle {
+    position: relative;
+    font-size: 50px;
+    top: 15vh;
+}
+
+/* .overlays {
+    position: absolute;
+    padding: 10vh 5vw;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5vh;
+    background-color: white;
+    font-size: 1.2em;
+    border: 2px solid black;
+} */
+
+#choose-number-of-players {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#choose-number-of-players > div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    height: 40vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5vw;
+    border-radius: 3vh;
+    background-color: white;
+}
+
+#choose-number-of-players h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+#players-amount-text, #choose-truck {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+}
+
+#players-amount-text {
+    margin: 0 auto 5vh auto;
+}
+
+#players-amount-text p {
+    margin: 0 40px;
+}
+
+#choose-truck {
+    margin: 5vh auto 0 auto;
+}
+
+#choose-truck img {
+    border: 2px solid white;
+    width: 85px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#choose-truck img:hover {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    /* After choosing the truck, border stays */
+}
+
+#players-amount-confirm {
+    width: 10vw;
+    margin: 0 auto;
+}
+
+#overlay-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 99;
+}
+
+#overlay-background, #choose-number-of-players{
+    display: none;
+    /* whenever the overlay is clicked, overlay-background should be displayed */
+}
+
+#intro-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    min-width: 1366px;
+    min-height: 768px;
+}
+
+.lines {
+    opacity: 1;
+    transition: all 500ms ease-out;
+}
+
+.truck {
+    stroke:#FFFFFF;
+    stroke-width:1;
+    stroke-miterlimit:10;
+    transition: all 500ms ease-out;
+}
+
+#bottom-btns {
+    position: fixed;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#game-intro button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+#game-intro button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+/* #game-intro #gamerule-button {
+    background-color: rgb(100, 100, 100);
+    border: 2px solid rgb(100, 100, 100);
+} */
+
+/* #game-intro #gamerule-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(100, 100, 100);
+} */
+
+
+
+
+
+
+
+
+
+
+/* After Game Starts */
+#the-game {
+    display: none;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-areas: 'a b c';
+    grid-column-gap: 20px;
+    padding: 5vh 10vw;
+    margin: 0 auto;
     
 }
 
-#project-brief main {
-    position: relative;
-    width: 600px;
-    height: 100vh;
-    margin: 0 auto;
+#the-game button {
+    border: none;
+    border-radius: 3vh;
+    cursor: pointer;
+    transition: all 300ms ease-out;
 }
 
-#project-brief header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    background-color: black;
-    z-index: 1000;
+/* First Column */
+#col-1{
+    grid-area: a;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas: 'e f';
+    height: 90vh;
 }
 
-#project-brief header h1 {
+#players {
+    grid-row: 1/2;
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.numberofplayers-2 #players {grid-template-rows: 1fr 1fr;}
+.numberofplayers-3 #players {grid-template-rows: 1fr 1fr 1fr;}
+.numberofplayers-4 #players {grid-template-rows: 1fr 1fr 1fr 1fr;}
+
+.numberofplayers-2 #player-3, .numberofplayers-2 #player-4 {display: none;}
+.numberofplayers-2 #player-3-progress, .numberofplayers-2 #player-4-progress {display: none;}
+
+.numberofplayers-3 #player-4 {display: none;}
+.numberofplayers-3 #player-4-progress {display: none;}
+
+#player-1 {
+    grid-row: 1/2;
+    background-color: var(--player-1-color);
+}
+
+#player-2 {
+    grid-row: 2/3;
+    background-color: var(--player-2-color);
+}
+
+#player-3 {
+    grid-row: 3/4;
+    background-color: var(--player-3-color);
+}
+
+#player-4 {
+    grid-row: 4/5;
+    background-color: var(--player-4-color);
+}
+
+.players-info {
     color: white;
+    border-radius: 3vh;
+    padding: 3vh;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.players-info .players-name {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: flex-end;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.players-info .delivery-info{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: flex-start;
+    margin: 10px 0;
+}
+
+.players-info .percentage {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    align-self: center;
     text-align: center;
-    padding: 30px 0;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+#col-1-control {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+#col-1-control button {
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#col-1-control button:hover {
+    background-color: var(--current-player-color);
+}
+
+
+
+/* Second Column */
+#col-2{
+    grid-area: b;
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+    grid-row-gap: 20px;
+    height: 90vh;
+    line-height: 1em;
+}
+
+#progress {
+    display: grid;
+    border: 2px solid black;
+    border-radius: 3vh;
+}
+
+.numberofplayers-2 #progress {grid-template-rows: 1fr 1fr;}
+.numberofplayers-3 #progress {grid-template-rows: 1fr 1fr 1fr;}
+.numberofplayers-4 #progress {grid-template-rows: 1fr 1fr 1fr 1fr;}
+
+#progress .players-progress-area {
+    position: relative;
+    /* min-height: 150px; */
+}
+
+.players-icon {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#col-2 .progress-bars {
+    position: relative;
+    margin: 0 auto;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 16vh;
+    min-height: 145px;
+    
+}
+
+#col-2 svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: all 1s ease-in-out;
+}
+
+#col-2 svg .circle-progress {
+    stroke-dasharray: 58;
+    stroke-dashoffset: 58;
+    z-index: 100;
+}
+
+#circle-1 .circle-progress {
+    stroke: var(--player-1-color);
+}
+
+#circle-2 .circle-progress {
+    stroke: var(--player-2-color);
+}
+
+#circle-3 .circle-progress {
+    stroke: var(--player-3-color);
+}
+
+#circle-4 .circle-progress {
+    stroke: var(--player-4-color);
+}
+
+#col-2 svg .circle-background {
+    stroke: rgb(230, 230, 230);
+    z-index: 50;
+}
+
+#col-2 button {
+    background-color: black;
+    color:white;
+    font-size: 1.2em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#col-2 button img {
+    margin-right: 10px;
+}
+
+#col-2 button:hover {
+    background-color: var(--current-player-color);
+}
+
+
+
+/* Third Column */
+#col-3 {
+    grid-area: c;
+    display: grid;
+    grid-template-rows: 4fr 5fr;
+    grid-row-gap: 20px;
+}
+
+#col-3 > div {
+    border-radius: 3vh;
+    background-color: var(--current-player-color);
+    text-align: center;
+    color: white;
+}
+
+#gameinfo {
+    position: relative;
+    height: 80%;
+}
+
+#gameinfo h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 9vh;
+}
+
+#spinning-numbers {
+    position: absolute;
+    box-sizing: content-box;
+    top: 60%;
+    left: 50%;
+    width: 70%;
+    height: 60%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 3vh;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--current-player-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#spinning-numbers p {
+    position: relative;
+    font-size: 5em;
+    margin: 0;
+    line-height: 1em;
+}
+
+#game-area {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#game-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#instruction-fill-gas-for {
+    font-size: 1.3em;
+    margin: 0.5em auto 1em auto;
+}
+
+#current-player-name {
+    font-size: 4em;
     margin: 0;
 }
 
-
-#project-brief main section {
-    background-color: rgba(241, 241, 241, 0.9);
-    padding: 40px 50px;
-    margin: 5px 0;
-    text-align: center;
+#game-control {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 3vh;
 }
 
-#project-brief main section h2 {
-    text-align: left;
-    text-transform: uppercase;
-    line-height: 2em
+#game-control button {
+    transition: all 500ms ease-out;
 }
 
-#project-brief main section p {
-    text-align: left;
-    line-height: 2em;
+#btn-10 {
+    grid-column: 1/2;
+    grid-row: 1/3;
 }
 
-#project-brief main section a {
+#btn-spin {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+#btn-fill {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    visibility: hidden;
+}
+
+#game-control button{
+    background-color: white;
+    border: 3px solid white;
+    color: var(--current-player-color);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#game-control button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+#game-control button:hover .pump {
+    fill: white;
+}
+
+#btn-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#pump-svg {
+    width: 25px;
+}
+
+.pump {
+    fill: var(--current-player-color);
+}
+
+/* The Footer Area */
+footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 4vh;
+    width: 100vw;
+    top: 96vh;
+    left: 0;
+    z-index: 50;
+}
+
+footer a {
     text-decoration: none;
-    color: cadetblue;
+    color: rgb(230, 230, 230);
+    width: 10vw;
     text-align: center;
-    padding: 10px;
 }
 
-#project-brief main section img {
-    border-radius: 25px;
-    margin: 20px 0;
+footer a:hover {
+    color: rgba(0, 0, 0, 0.7);
 }
+

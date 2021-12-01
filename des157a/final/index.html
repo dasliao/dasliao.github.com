@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main> 
+        <div id="side-buttons">
+            <button id="user-test-button">Test<br>Menu</button>
+            <button id="gamerules-button">Game<br>Rules</button>
+        </div>
+        <div id="user-test">
+            <div>
+                <h2>Boost Your Delivery - User Test</h2>
+                <p id='user-test-text'>Hello, and welcome to the User Testing of my game, Boost Your Delivery. I hope you enjoy the game, and I would love to hear any suggestions from you.<br><br>There are some tasks I would like you to perform:<br><br><strong>1. Reading the Game Rules.</strong><br><br><strong>2. Start a 2 players game.</strong><br><br><strong>3. Use restart button to restart the game. </strong><br><br><strong>4. Explore the sound effects of clicking each button. </strong><br><br>Thank you so much.<br><br><strong>Oh, you can ALWAYS revisit the Test Menu by clicking the button on the left side.</strong></p>
+                <button id="confirmed-user-test">I Got It.</button>
+            </div>
+        </div>
+        <div id="gamerules">
+            <div>
+                <h2>Boost Your Delivery</h2>
+                <p id='gamerules-text'>There are Four delivery trucks. Each of the players will choose a truck to start the game. For the trucks to get to the destination(total of 100 miles), players need to fill the gas for the trucks.<br><br>Every round, the players have three options:<br>1. Spin the number and fill the truck unless any of the three numbers is 1. If it happens, the truck will not get any gas this round. <strong>(You can spin as many time as you want. If you like the score, click FILL to store the scores from this round.)</strong><br>2. You think you are out of luck and just wanna fill 10 miles of gas.<br>3. If you think you are totally fine with your progress, you can drive PASS by.<br><br>The first truck arrives destination wins, 100 miles.<br><br>Oh, and if two or more numbers are 1, the truck will break and return to the starting point. So don't do that.</p>
+                <button id="confirmed-gamerules">I Got It.</button>  
+            </div>           
+        </div>
+        <div id="audio-area">
+            <audio id="audio-start">
+                <source src="audios/start.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-gamerule">
+                <source  src="audios/gamerule.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-spin">
+                <source src="audios/spin.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-others">
+                <source src="audios/others.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-fill">
+                <source src="audios/fill.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-10">
+                <source src="audios/10.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-pass">
+                <source src="audios/pass.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-restart">
+                <source src="audios/restart.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-ut">
+                <source src="audios/user-test.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-error">
+                <source src="audios/error.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="game-intro">
+            <h1 id="gametitle">Boost Your Delivery</h1>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="intro-background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+                <g id="purple">
+                    <path class="st0 lines" d="M1209,396H0v40h1209c11,0,20-9,20-20S1220,396,1209,396z"/>
+                </g>
+                <g id="orange">
+                    <path class="st1 lines" d="M725,535c-11,0-20,9-20,20s9,20,20,20h642v-40H725z"/>
+                </g>
+                <g id="green">
+                    <path class="st2 lines" d="M71,646c-5.1,0-10.2-2-14.1-5.9c-7.8-7.8-7.8-20.5,0-28.3l364-364c7.8-7.8,20.5-7.8,28.3,0s7.8,20.5,0,28.3
+                        l-364,364C81.2,644,76.1,646,71,646z"/>
+                </g>
+                <path id="blue" class="st3 lines" d="M1060,666c-11,0-20-9-20-20V-76c0-11,9-20,20-20s20,9,20,20v722C1080,657,1071,666,1060,666z"/>
+                <path id="truck-4" class="truck" d="M649.8,364.3h-61.2c-3.1,0-5.6,3.2-5.6,7.2V398c0,4,2.5,7.2,5.6,7.2h61.2c3.1,0,5.6-3.2,5.6-7.2
+                v-26.5C655.4,367.5,652.9,364.3,649.8,364.3z M631.9,401c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7v-32.1c0-0.4,0.3-0.7,0.7-0.7
+                c0.4,0,0.7,0.3,0.7,0.7V401z M649.7,385.1c0,1.2-0.7,2.1-1.6,2.1h-9.5c-0.9,0-1.6-1-1.6-2.1v-12.6c0-1.2,0.7-2.1,1.6-2.1h9.5
+                c0.9,0,1.6,1,1.6,2.1V385.1z"/>
+                <path id="truck-3" class="truck" d="M779.4,377.4l-21.8-12.5c-1.1-0.6-2.3-0.9-3.5-0.9l-39.2-0.1c-4,0-7.2,3.2-7.2,7.2v26.5
+                c0,4,3.2,7.2,7.2,7.2h61.1c4,0,7.2-3.2,7.2-7.2v-13.9C783,381.1,781.7,378.7,779.4,377.4z M747,400.3c0,0.4-0.3,0.7-0.7,0.7
+                c-0.4,0-0.7-0.3-0.7-0.7v-31.9c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7V400.3z M775.7,385.8c0,2.8-2.2,5-5,5h-14.1
+                c-2.8,0-5-2.2-5-5v-9.3c0-3.9,4.3-6.3,7.6-4.3l14.1,8.5c1.5,0.9,2.4,2.5,2.4,4.3V385.8z"/>
+                <path id="truck-2" class="truck" d="M909.5,391.7L882.8,365c-1.3-1.3-3.2-2.1-5.1-2.1h-39.1c-4,0-7.2,3.2-7.2,7.2v26.4
+                c0,3.9,3.2,7.2,7.1,7.2l65.8,0.3C910.8,404,914,396.2,909.5,391.7z M869.5,399.3c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7
+                v-31.9c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7V399.3z M894.2,397.3h-14.1c-2.7,0-4.9-2.2-4.9-4.9v-13.1c0-4.3,5.1-6.5,8.3-3.6
+                l14.1,13.1C900.8,391.8,898.6,397.3,894.2,397.3z"/>
+                <path id="truck-1" class="truck" d="M529.5,381.3l-15.9-15.9c-1.3-1.3-3.2-2.1-5.1-2.1h-10.3c-4,0-7.2,3.2-7.2,7.2v3
+                c0,4-3.2,7.2-7.2,7.2h-22.3c-4,0-7.2,3.2-7.2,7.2v8.9c0,4,3.2,7.2,7.2,7.2h62.8c4,0,7.2-3.2,7.2-7.2v-10.4
+                C531.6,384.5,530.8,382.7,529.5,381.3z M490.7,399.3c0,0.4-0.3,0.7-0.7,0.7s-0.7-0.3-0.7-0.7v-15.6c0-0.4,0.3-0.7,0.7-0.7
+                s0.7,0.3,0.7,0.7V399.3z M513,382.7h-12.5c-2.2,0-4-1.8-4-4v-4.8c0-2.2,1.8-4,4-4h7.7c1,0,2.1,0.4,2.8,1.2l4.8,4.8
+                C518.3,378.4,516.5,382.7,513,382.7z"/>
+            </svg>
+            <div id="choose-number-of-players" class="overlays">
+                <div>
+                    <h3 >How Many Players Are Playing?</h3>
+                    <div id="choose-truck">
+                        <img src="images/Truck-2.svg" alt="2" width="100px">
+                        <img src="images/Truck-3.svg" alt="3" width="100px">
+                        <img src="images/Truck-4.svg" alt="4" width="100px">
+                    </div>
+                    <div id="players-amount-text"><p>2</p><p>3</p><p>4</p></div>
+                    <button id="players-amount-confirm">Start!</button>
+                </div>
+            </div>
+            <div id="bottom-btns">
+                <button id="startgame-button">Start the Game</button>
+            </div>
+        </div>
+
+        
+        
+        <div id="the-game" class="numberofplayers-2">
+            <div id="col-1" class="cols">
+                <div id="players" >
+                    <div id="player-1" class="players-info">
+                        <h3 id="player-1-name" class="players-name">Player 1</h3>
+                        <p id="player-1-delivery-info" class="delivery-info">The shipping label was created</p>
+                        <p id="player-1-percentage" class="percentage">0%</p>
+                    </div>
+                    <div id="player-2" class="players-info">
+                        <h3 id="player-2-name" class="players-name">Player 2</h3>
+                        <p id="player-2-delivery-info" class="delivery-info">The shipping label was created</p>
+                        <p id="player-2-percentage" class="percentage">0%</p>
+                    </div>
+                    <div id="player-3" class="players-info">
+                        <h3 id="player-3-name" class="players-name">Player 3</h3>
+                        <p id="player-3-delivery-info" class="delivery-info">The shipping label was created</p>
+                        <p id="player-3-percentage" class="percentage">0%</p>
+                    </div>
+                    <div id="player-4" class="players-info">
+                        <h3 id="player-4-name" class="players-name">Player 4</h3>
+                        <p id="player-4-delivery-info" class="delivery-info">The shipping label was created</p>
+                        <p id="player-4-percentage" class="percentage">0%</p>
+                    </div>
+                </div>
+                <div id="col-1-control">
+                    <button id="quitgame-button">WANNA QUIT?</button>
+                    <button id="restart-game" class="gamecontrols">RESTART</button>
+                </div>
+            </div>
+            
+            <div id="col-2" class="cols">
+                <div id="progress">
+                    <div id="player-1-progress" class="players-progress-area">
+                        <img id="player-icon-1" class="players-icon" src="images/Truck-1.svg" alt="player-icon-1">
+                        <svg id="circle-1" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-2-progress" class="players-progress-area">
+                        <img id="player-icon-2" class="players-icon" src="images/Truck-2.svg" alt="player-icon-2">
+                        <svg id="circle-2" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-3-progress" class="players-progress-area">
+                        <img id="player-icon-3" class="players-icon" src="images/Truck-3.svg" alt="player-icon-3">
+                        <svg id="circle-3" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                    <div id="player-4-progress" class="players-progress-area">
+                        <img id="player-icon-4" class="players-icon" src="images/Truck-4.svg" alt="player-icon-4">
+                        <svg id="circle-2" class="progress-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <circle class="circle-background" cx='50%' cy='50%' r='30%'/>
+                            <circle class="circle-progress" cx='50%' cy='50%' r='30%'/>
+                        </svg>
+                    </div>
+                </div>
+                <button id="mute-button" class="gamecontrols unmuted"><img src="images/sound.svg" alt="Sound Icon" width="30px">MUTE</button>
+            </div>
+    
+            <div id="col-3" class="cols">
+                <div id="gameinfo">
+                    <h2>Boost Your Delivery</h2>
+                    <div id="spinning-numbers">
+                        <p class="the-numbers">0</p>
+                        <p class="the-numbers">0</p>
+                        <p class="the-numbers">0</p>
+                    </div>
+                </div>
+                <div id="game-area">
+                    <div id="game-instructions">
+                        <p id="instruction-fill-gas-for">FILL SOME GAS FOR</p>
+                        <p id="current-player-name">Player 1</p>
+                    </div>
+                    <div id="game-control">
+                        <button id="btn-spin" class="actions-btn">SPIN</button>
+                        <button id="btn-10" class="actions-btn">+10</button>
+                        <button id="btn-fill" class="actions-btn">
+                            <svg id="pump-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.13 60.18" width: 100px; height: 100px;>
+                                <g id="pump">
+                                    <path class="pump" d="M34.13,45.72l-4.8-10.41A1.45,1.45,0,0,0,28,34.47H25.89a3.55,3.55,0,0,1-2.51-6.07l3.72-3.73a3.57,3.57,0,0,1,5,0l4.6,4.6V10.61A10.61,10.61,0,0,0,26.13,0H10.61A10.61,10.61,0,0,0,0,10.61v39A10.61,10.61,0,0,0,10.61,60.18H26.13A10.61,10.61,0,0,0,36.74,49.56V47.73h0A3.59,3.59,0,0,1,34.13,45.72ZM5.91,12.2a7,7,0,0,1,7-7h11a7,7,0,0,1,0,14h-11A7,7,0,0,1,5.91,12.2Z"/>
+                                    <path class="pump" d="M56.11,30.49c-2.52-7.14-9.64-14.42-17.25-18.22v4.82c5.92,3.51,11.3,9.29,13.25,14.82,1.22,3.45,1,6.31-.67,8.5a7.06,7.06,0,0,1-5.52,2.43,4.35,4.35,0,0,1-1.69-.45l-3,3a8.1,8.1,0,0,0,4.52,1.65h.48A11.3,11.3,0,0,0,54.81,43C57.37,39.63,57.82,35.31,56.11,30.49Z"/>
+                                    <path class="pump" d="M43,40.59l-4.19,4.18-.46.47a1.45,1.45,0,0,1-1.28.4,1.48,1.48,0,0,1-1.06-.81L31.26,34.41A3.57,3.57,0,0,0,28,32.35H25.89a1.4,1.4,0,0,1-1.32-.89,1.44,1.44,0,0,1,.3-1.57l3.73-3.71a1.38,1.38,0,0,1,1-.43,1.37,1.37,0,0,1,1,.43l8.21,8.21L43,38.55A1.47,1.47,0,0,1,43,40.59Z"/>
+                                </g>
+                            </svg>
+                            FILL</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <a href="mailto:&#098;&#117;&#102;&#102;&#101;&#114;&#045;&#100;&#101;&#098;&#116;&#111;&#114;&#046;&#048;&#064;&#105;&#099;&#108;&#111;&#117;&#100;&#046;&#099;&#111;&#109;">Email</a>
+        <a href="https://validator.w3.org/check?uri=https://dasliao.github.io/des157a/final/user-test/">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://dasliao.github.io/des157a/final/user-test/">Valid CSS</a>
+    </footer>
+
+
+</body>
+</html>
