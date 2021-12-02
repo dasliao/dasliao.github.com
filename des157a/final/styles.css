@@ -378,6 +378,7 @@ main {
     display: grid;
     grid-template-columns: 7fr 1fr;
     grid-template-rows: 1fr 1fr;
+    opacity: 1;
 }
 
 .players-info .players-name {
