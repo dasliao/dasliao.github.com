@@ -1,0 +1,71 @@
+* {
+    box-sizing:border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+body {
+    line-height: 2em;
+    background-color: black;
+    color: white;
+}
+
+body > div {
+    width: 800px;
+    padding: 80px 100px;
+    margin: 50px auto;
+    border-radius: 5vh;
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 100px auto;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+#observations {
+    background-color: #AFBD85;
+}
+
+#observations > ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#plan {
+    background-color: #EDAA6C;
+}
+
+#details {
+    background-color: #87AFEC;
+}
+
+#details > ul {
+    list-style-type: none;
+    padding-left:10px
+}
+
+#details > ul > li {
+    margin-top: 50px;
+}
+
+#images {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+img {
+    width: 48%;
+    border-radius: 2vh;
+}
