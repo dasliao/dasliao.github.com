@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+}
+
+body.switch {
+    background-color: rgb(235, 235, 235);
+    color: #333;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    min-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35vw 55vw 10vw;
+    overflow-x: scroll;
+}
+
+/******************************* The Side *******************************/
+
+#side {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 768px;
+    background-color: rgb(216, 115, 115);
+    animation-name: changing-background-light;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: rgb(88, 48, 48);
+}
+
+@keyframes changing-background-light {
+    0%   {background-color: rgb(216, 115, 115);color: rgb(88, 48, 48);}
+    12.5%  {background-color: rgb(224, 224, 136);color: rgb(124, 111, 55);}
+    25%  {background-color: rgb(144, 230, 118);color: rgb(55, 87, 45);}
+    37.5% {background-color: rgb(140, 224, 185);color: rgb(76, 122, 101);}
+    50% {background-color: rgb(140, 160, 224);color: rgb(68, 77, 109);}
+    62.5% {background-color: rgb(148, 150, 236);color: rgb(68, 68, 107);}
+    75% {background-color: rgb(213, 165, 231);color: rgb(103, 62, 117);}
+    87.5% {background-color: rgb(230, 174, 220);color: rgb(136, 76, 125);}
+    100%   {background-color: rgb(216, 115, 115);color: rgb(88, 48, 48);}
+}
+
+button {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px 120px 5px 20px;
+    background-color: #f1f1f1af;
+    margin: 20px 25%;
+    color: #333;
+    border: 0;
+    border-radius: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 500ms ease-in-out;
+    cursor:pointer;
+}
+
+button:hover {
+    color: #f1f1f1;
+    background-color: #333;
+}
+
+header {
+    position: sticky;
+    grid-row: 2/3;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1, h2, h3, h4, header p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+h1, h2, h3, h4 {
+    text-indent: 2em;
+}
+
+header p{
+    text-indent: 0em;
+}
+
+header .tags {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+/*** footer ***/
+
+footer {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 12px;
+    color: #333;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer a {
+    background-color: rgb(235, 235, 235);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:#333;
+}
+
+footer a:hover {
+    color:#f1f1f1;
+    background-color: #333;
+}
+
+/*************** Side After switch *****************/
+
+button.switch {
+    background-color: #000000af;
+    color: #f1f1f1;
+    padding: 5px 20px 5px 120px;
+    transition: 500ms ease-in-out;
+}
+
+button.switch:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+#side.switch {
+    /* background-color: rgb(88, 48, 48); */
+    background-color: #333;
+    animation-name: changing-background-dark;
+}
+
+/* @keyframes changing-background-dark {
+    0%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
+    12.5%  {background-color: rgb(124, 111, 55);color: rgb(240, 240, 107);}
+    25%  {background-color: rgb(55, 87, 45);color: rgb(144, 230, 118);}
+    37.5% {background-color: rgb(76, 122, 101);color: rgb(140, 224, 185);}
+    50% {background-color: rgb(68, 77, 109);color: rgb(140, 160, 224);}
+    62.5% {background-color: rgb(68, 68, 107);color: rgb(148, 150, 236);}
+    75% {background-color: rgb(103, 62, 117);color: rgb(213, 165, 231);}
+    87.5% {background-color: rgb(136, 76, 125);color: rgb(230, 174, 220);}
+    100%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
+} */
+
+/* @keyframes changing-background-dark {
+    0%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
+    12.5%  {background-color: rgb(124, 111, 55);color: rgb(240, 240, 107);}
+    25%  {background-color: rgb(55, 87, 45);color: rgb(144, 230, 118);}
+    37.5% {background-color: rgb(76, 122, 101);color: rgb(140, 224, 185);}
+    50% {background-color: rgb(68, 77, 109);color: rgb(140, 160, 224);}
+    62.5% {background-color: rgb(68, 68, 107);color: rgb(148, 150, 236);}
+    75% {background-color: rgb(103, 62, 117);color: rgb(213, 165, 231);}
+    87.5% {background-color: rgb(136, 76, 125);color: rgb(230, 174, 220);}
+    100%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
+} */
+
+
+#side.switch header .tags {
+    color: rgba(37, 37, 37, 0.6);
+}
+
+/**************** Colunm Area is below ****************/
+
+main {
+    background-color: #fff;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 3em;
+    grid-column: 2/4;
+    overflow:scroll;
+    height: 768px;
+    transition: 500ms ease-in-out;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    width: 30vw;
+    margin: 10vh .25em ;
+    padding: 2em 1em;
+    
+}
+
+section nav {
+    width: 90%;
+    height: 90%;
+    overflow: scroll;
+}
+
+h5 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    color: #333;
+    margin: .5em 1em;
+    align-self: flex-start;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+ol,
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding: 10px 20px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #333;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+section li:hover {
+    background-color: orange;
+    width: 90%;
+}
+
+section li:hover a {
+    color: rgb(255, 255, 255);
+}
+
+section a {
+    line-height: 1em;
+    display: inline-block;
+    padding: .4em .5em;
+    color: #333;
+    text-align: center;
+}
+
+/* Colunm Area after switch */
+
+main.switch {
+    background-color: #000;
+}
+
+main.switch h5 {
+    color:#f1f1f1;
+}
+
+section.switch {
+    background-color: #333;
+}
+
+section.switch a {
+    color: #333;
+}
+
+section.switch a:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+}
+
