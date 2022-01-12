@@ -6,13 +6,17 @@
     const side = document.querySelector('#side');
     const sections = document.querySelectorAll('section');
     const lists = document.querySelectorAll('section li');
+    const listsLinks = document.querySelectorAll('section li a');
     // const scrollContainer = document.querySelector("main");
     let mode = 'light';
     let satAndLight = '55%, 70%';
+    let textSatAndLight = '35%, 30%';
     let hueList = [];
     var randomHue;
-    // scrollContainer.addEventListener("wheel", (evt) => {
+
+    // scrollContainer.addEventListener("wheel", function(evt){
     //     evt.preventDefault();
+    //     console.log('hi');
     //     scrollContainer.scrollLeft += evt.deltaY;
     // });
 
@@ -47,12 +51,15 @@
         hueList = [`${Math.floor(Math.random()*(359-1) + 1)}`];
         if(brightness === 'dark') {
             satAndLight = '45%, 45%';
+            textSatAndLight = '70%, 80%'
         } else if (brightness === 'light') {
             satAndLight = '55%, 70%';
+            textSatAndLight = '35%, 30%'
         }
         for(let i = 0; i < lists.length; i++) {
             randomHue = Math.floor(Math.random()*(359-1) + 1);
             lists[i].style.backgroundColor = `hsl(${hueCheck(randomHue)}, ${satAndLight})`;
+            listsLinks[i].style.color = `hsl(${hueCheck(randomHue)}, ${textSatAndLight})`;
         }
     }
 

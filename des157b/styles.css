@@ -39,13 +39,26 @@ body.switch {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     color: rgb(88, 48, 48);
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.349);
+}
+
+@keyframes changing-text-dark {
+    0%   {color: rgb(88, 48, 48);}
+    12.5%  {color: rgb(124, 111, 55);}
+    25%  {color: rgb(55, 87, 45);}
+    37.5% {color: rgb(76, 122, 101);}
+    50% {color: rgb(68, 77, 109);}
+    62.5% {color: rgb(68, 68, 107);}
+    75% {color: rgb(103, 62, 117);}
+    87.5% {color: rgb(136, 76, 125);}
+    100%   {color: rgb(88, 48, 48);}
 }
 
 @keyframes changing-background-light {
     0%   {background-color: rgb(216, 115, 115);color: rgb(88, 48, 48);}
     12.5%  {background-color: rgb(224, 224, 136);color: rgb(124, 111, 55);}
-    25%  {background-color: rgb(144, 230, 118);color: rgb(55, 87, 45);}
-    37.5% {background-color: rgb(140, 224, 185);color: rgb(76, 122, 101);}
+    25%  {background-color: rgb(148, 221, 126);color: rgb(55, 87, 45);}
+    37.5% {background-color: rgb(160, 214, 189);color: rgb(76, 122, 101);}
     50% {background-color: rgb(140, 160, 224);color: rgb(68, 77, 109);}
     62.5% {background-color: rgb(148, 150, 236);color: rgb(68, 68, 107);}
     75% {background-color: rgb(213, 165, 231);color: rgb(103, 62, 117);}
@@ -53,24 +66,39 @@ body.switch {
     100%   {background-color: rgb(216, 115, 115);color: rgb(88, 48, 48);}
 }
 
+button, #side a {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+}
+
 button {
     grid-column: 1/2;
     grid-row: 1/2;
     padding: 5px 120px 5px 20px;
-    background-color: #f1f1f1af;
-    margin: 20px 25%;
-    color: #333;
+    margin: 20px 20%;
     border: 0;
-    border-radius: 15px;
+    border-radius: 25px;
     font-family: 'Courier New', Courier, monospace;
     transition: 500ms ease-in-out;
     cursor:pointer;
 }
 
-button:hover {
-    color: #f1f1f1;
-    background-color: #333;
+#side a {
+    transition: 500ms ease-in-out;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
+
+#side a:hover, button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
+    animation-name: changing-text-dark;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+}
+
+
 
 header {
     position: sticky;
@@ -115,22 +143,16 @@ footer {
     gap: 20px;
 }
 
-footer a {
-    background-color: rgb(235, 235, 235);
-    padding: 10px 20px;
-    border-radius: 10px;
-    color:#333;
-}
-
-footer a:hover {
-    color:#f1f1f1;
-    background-color: #333;
-}
 
 /*************** Side After switch *****************/
 
+#side.switch a, button.switch {
+    background-color: #000000;
+    color: #f1f1f1;
+}
+
 button.switch {
-    background-color: #000000af;
+    background-color: #000000;
     color: #f1f1f1;
     padding: 5px 20px 5px 120px;
     transition: 500ms ease-in-out;
@@ -142,24 +164,33 @@ button.switch:hover {
 }
 
 #side.switch {
-    /* background-color: rgb(88, 48, 48); */
     background-color: #333;
-    animation-name: changing-background-dark;
+    animation-name: changing-text-light;
 }
 
-/* @keyframes changing-background-dark {
-    0%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
-    12.5%  {background-color: rgb(124, 111, 55);color: rgb(240, 240, 107);}
-    25%  {background-color: rgb(55, 87, 45);color: rgb(144, 230, 118);}
-    37.5% {background-color: rgb(76, 122, 101);color: rgb(140, 224, 185);}
-    50% {background-color: rgb(68, 77, 109);color: rgb(140, 160, 224);}
-    62.5% {background-color: rgb(68, 68, 107);color: rgb(148, 150, 236);}
-    75% {background-color: rgb(103, 62, 117);color: rgb(213, 165, 231);}
-    87.5% {background-color: rgb(136, 76, 125);color: rgb(230, 174, 220);}
-    100%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
-} */
+#side.switch a {
+    background-color: #000000;
+    color: #f1f1f1;
+}
 
-/* @keyframes changing-background-dark {
+#side.switch a:hover, button.switch:hover {
+    background-color: #9b9b9b;
+    color: black !important;
+}
+
+@keyframes changing-text-light {
+    0%   {color: rgb(216, 115, 115);}
+    12.5%  {color: rgb(240, 240, 107);}
+    25%  {color: rgb(144, 230, 118);}
+    37.5% {color: rgb(140, 224, 185);}
+    50% {color: rgb(140, 160, 224);}
+    62.5% {color: rgb(148, 150, 236);}
+    75% {color: rgb(213, 165, 231);}
+    87.5% {color: rgb(230, 174, 220);}
+    100%   {color: rgb(216, 115, 115);}
+}
+
+@keyframes changing-background-dark {
     0%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
     12.5%  {background-color: rgb(124, 111, 55);color: rgb(240, 240, 107);}
     25%  {background-color: rgb(55, 87, 45);color: rgb(144, 230, 118);}
@@ -169,11 +200,11 @@ button.switch:hover {
     75% {background-color: rgb(103, 62, 117);color: rgb(213, 165, 231);}
     87.5% {background-color: rgb(136, 76, 125);color: rgb(230, 174, 220);}
     100%   {background-color: rgb(88, 48, 48);color: rgb(216, 115, 115);}
-} */
+}
 
 
 #side.switch header .tags {
-    color: rgba(37, 37, 37, 0.6);
+    color: rgba(0, 0, 0);
 }
 
 /**************** Colunm Area is below ****************/
@@ -186,7 +217,7 @@ main {
     margin: 0 auto;
     padding: 0 3em;
     grid-column: 2/4;
-    overflow:scroll;
+    overflow-x: scroll;
     height: 768px;
     transition: 500ms ease-in-out;
 }
@@ -246,19 +277,19 @@ section li {
 }
 
 section li:hover {
-    background-color: orange;
     width: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 section li:hover a {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
 }
 
-section a {
+section li a {
     line-height: 1em;
     display: inline-block;
     padding: .4em .5em;
-    color: #333;
     text-align: center;
 }
 
@@ -273,15 +304,8 @@ main.switch h5 {
 }
 
 section.switch {
-    background-color: #333;
+    background-color: #222;
 }
 
-section.switch a {
-    color: #333;
-}
 
-section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-}
 
