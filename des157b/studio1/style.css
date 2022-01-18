@@ -124,22 +124,18 @@ h2 {
 
 #filter-1 {
     backdrop-filter: grayscale(100%);
-    -webkit-backdrop-filter:grayscale(100%);
 }
 
 #filter-2 {
     backdrop-filter: grayscale(100%) contrast(300%);
-    -webkit-backdrop-filter:grayscale(100%) contrast(300%);
 }
 
 #filter-3 {
     backdrop-filter: hue-rotate(120deg);
-    -webkit-backdrop-filter:hue-rotate(120deg);
 }
 
 #filter-4 {
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter:blur(2px);
     border-right: none;
 }
 
