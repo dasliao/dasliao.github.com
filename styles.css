@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    padding: 0;
+    align-items: center;
+}
+
+li {
+    padding: 0;
+    height: 100%;
+}
+
+#des157 a {
+    padding: 20px 100px;
+    margin-right: 50px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 500ms ease-in-out;
+}
+
+#des157 a:hover {
+    background-color: yellowgreen;
+    color: black;
+    
+}
