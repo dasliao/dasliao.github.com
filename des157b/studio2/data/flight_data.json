@@ -1,0 +1,1292 @@
+{
+  "flight1": {
+    "date": "January 8, 2022",
+    "airlines": "Lufthansa",
+    "flightNo": "LH454",
+    "origin": "FRA",
+    "departure": "10:05",
+    "destination": "SFO",
+    "arrival": "12:30",
+    "distance": 9171
+  },
+  "flight2": {
+    "date": "January 7, 2022",
+    "airlines": "Lufthansa",
+    "flightNo": "LH161",
+    "origin": "LEJ",
+    "departure": "10:40",
+    "destination": "FRA",
+    "arrival": "11:40",
+    "distance": 300
+  },
+  "flight3": {
+    "date": "December 12, 2021",
+    "airlines": "Lufthansa",
+    "flightNo": "LH2170",
+    "origin": "MUC",
+    "departure": "21:35",
+    "destination": "LEJ",
+    "arrival": "22:30",
+    "distance": 342
+  },
+  "flight4": {
+    "date": "December 11, 2021",
+    "airlines": "Lufthansa",
+    "flightNo": "LH459",
+    "origin": "SFO",
+    "departure": "22:40",
+    "destination": "MUC",
+    "arrival": "18:50",
+    "distance": 9437
+  },
+  "flight5": {
+    "date": "September 24, 2021",
+    "airlines": "Southwest Airline",
+    "flightNo": "WN4305",
+    "origin": "LAX",
+    "departure": "20:10",
+    "destination": "SMF",
+    "arrival": "21:35",
+    "distance": 600
+  },
+  "flight6": {
+    "date": "September 23, 2021",
+    "airlines": "Southwest Airline",
+    "flightNo": "WN1072",
+    "origin": "SMF",
+    "departure": "21:45",
+    "destination": "LAX",
+    "arrival": "23:10",
+    "distance": 600
+  },
+  "flight7": {
+    "date": "January 1, 2021",
+    "airlines": "United Airlines",
+    "flightNo": "UA544",
+    "origin": "DEN",
+    "departure": "11:15",
+    "destination": "SMF",
+    "arrival": "12:55",
+    "distance": 1463
+  },
+  "flight8": {
+    "date": "December 21, 2020",
+    "airlines": "United Airlines",
+    "flightNo": "UA404",
+    "origin": "SFO",
+    "departure": "18:40",
+    "destination": "SAN",
+    "arrival": "20:10",
+    "distance": 719
+  },
+  "flight9": {
+    "date": "December 21, 2020",
+    "airlines": "United Airlines",
+    "flightNo": "UA5559",
+    "origin": "SMF",
+    "departure": "16:15",
+    "destination": "SFO",
+    "arrival": "17:18",
+    "distance": 138
+  },
+  "flight10": {
+    "date": "September 3, 2020",
+    "airlines": "Alaska Airline",
+    "flightNo": "AS3428",
+    "origin": "SAN",
+    "departure": "16:45",
+    "destination": "SJC",
+    "arrival": "18:10",
+    "distance": 650
+  },
+  "flight11": {
+    "date": "December 31, 2019",
+    "airlines": "Turkish Airlines",
+    "flightNo": "TK79",
+    "origin": "IST",
+    "departure": "13:55",
+    "destination": "SFO",
+    "arrival": "16:35",
+    "distance": 10925
+  },
+  "flight12": {
+    "date": "December 31, 2019",
+    "airlines": "Turkish Airlines",
+    "flightNo": "TK1598",
+    "origin": "FRA",
+    "departure": "7:40",
+    "destination": "IST",
+    "arrival": "12:50",
+    "distance": 1881
+  },
+  "flight13": {
+    "date": "December 17, 2019",
+    "airlines": "Turkish Airlines",
+    "flightNo": "TK1597",
+    "origin": "IST",
+    "departure": "20:45",
+    "destination": "FRA",
+    "arrival": "22:05",
+    "distance": 1881
+  },
+  "flight14": {
+    "date": "December 16, 2019",
+    "airlines": "Turkish Airlines",
+    "flightNo": "TK80",
+    "origin": "SFO",
+    "departure": "18:15",
+    "destination": "IST",
+    "arrival": "18:10",
+    "distance": 10810
+  },
+  "flight15": {
+    "date": "September 22, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7989",
+    "origin": "PEK",
+    "departure": "15:50",
+    "destination": "SJC",
+    "arrival": "12:30",
+    "distance": 9551
+  },
+  "flight16": {
+    "date": "September 20, 2019",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6136",
+    "origin": "CTU",
+    "departure": "21:30",
+    "destination": "PEK",
+    "arrival": "0:25",
+    "distance": 1697
+  },
+  "flight17": {
+    "date": "September 20, 2019",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6136",
+    "origin": "CTU",
+    "departure": "21:30",
+    "destination": "PEK",
+    "arrival": "0:25",
+    "distance": 1697
+  },
+  "flight18": {
+    "date": "September 19, 2019",
+    "airlines": "Lucky Air",
+    "flightNo": "8L9666",
+    "origin": "LXA",
+    "departure": "11:45",
+    "destination": "CTU",
+    "arrival": "13:45",
+    "distance": 1334
+  },
+  "flight19": {
+    "date": "September 18, 2019",
+    "airlines": "Tibet Airlines",
+    "flightNo": "TV9853",
+    "origin": "CTU",
+    "departure": "6:05",
+    "destination": "LXA",
+    "arrival": "8:15",
+    "distance": 1334
+  },
+  "flight20": {
+    "date": "September 11, 2019",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8448",
+    "origin": "SGN",
+    "departure": "4:30",
+    "destination": "CTU",
+    "arrival": "8:50",
+    "distance": 2228
+  },
+  "flight21": {
+    "date": "September 4, 2019",
+    "airlines": "China Eastern",
+    "flightNo": "MU281",
+    "origin": "PVG",
+    "departure": "22:00",
+    "destination": "SGN",
+    "arrival": "1:35",
+    "distance": 2749
+  },
+  "flight22": {
+    "date": "September 4, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7611",
+    "origin": "PEK",
+    "departure": "7:40",
+    "destination": "PVG",
+    "arrival": "9:55",
+    "distance": 1178
+  },
+  "flight23": {
+    "date": "August 29, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7248",
+    "origin": "CTU",
+    "departure": "20:00",
+    "destination": "PEK",
+    "arrival": "22:55",
+    "distance": 1697
+  },
+  "flight24": {
+    "date": "August 23, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7347",
+    "origin": "PEK",
+    "departure": "21:35",
+    "destination": "CTU",
+    "arrival": "0:40",
+    "distance": 1697
+  },
+  "flight25": {
+    "date": "August 9, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7990",
+    "origin": "SJC",
+    "departure": "14:30",
+    "destination": "PEK",
+    "arrival": "18:00",
+    "distance": 9551
+  },
+  "flight26": {
+    "date": "June 10, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7989",
+    "origin": "PEK",
+    "departure": "15:50",
+    "destination": "SJC",
+    "arrival": "12:30",
+    "distance": 9551
+  },
+  "flight27": {
+    "date": "June 7, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7990",
+    "origin": "SJC",
+    "departure": "14:30",
+    "destination": "PEK",
+    "arrival": "18:00",
+    "distance": 9551
+  },
+  "flight28": {
+    "date": "April 7, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7989",
+    "origin": "PEK",
+    "departure": "15:50",
+    "destination": "SJC",
+    "arrival": "12:30",
+    "distance": 9551
+  },
+  "flight29": {
+    "date": "April 6, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7248",
+    "origin": "CTU",
+    "departure": "20:30",
+    "destination": "PEK",
+    "arrival": "23:25",
+    "distance": 1697
+  },
+  "flight30": {
+    "date": "April 3, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7347",
+    "origin": "PEK",
+    "departure": "21:35",
+    "destination": "CTU",
+    "arrival": "0:40",
+    "distance": 1697
+  },
+  "flight31": {
+    "date": "March 29, 2019",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7990",
+    "origin": "SJC",
+    "departure": "14:30",
+    "destination": "PEK",
+    "arrival": "18:05",
+    "distance": 9551
+  },
+  "flight32": {
+    "date": "December 24, 2018",
+    "airlines": "United Airlines",
+    "flightNo": "UA927",
+    "origin": "FRA",
+    "departure": "17:25",
+    "destination": "SFO",
+    "arrival": "20:00",
+    "distance": 9149
+  },
+  "flight33": {
+    "date": "December 24, 2018",
+    "airlines": "Lufthansa",
+    "flightNo": "LH943",
+    "origin": "MAN",
+    "departure": "12:35",
+    "destination": "FRA",
+    "arrival": "15:15",
+    "distance": 833
+  },
+  "flight34": {
+    "date": "December 15, 2018",
+    "airlines": "Lufthansa",
+    "flightNo": "LH942",
+    "origin": "FRA",
+    "departure": "11:25",
+    "destination": "MAN",
+    "arrival": "12:10",
+    "distance": 833
+  },
+  "flight35": {
+    "date": "December 14, 2018",
+    "airlines": "United Airlines",
+    "flightNo": "UA58",
+    "origin": "SFO",
+    "departure": "13:45",
+    "destination": "FRA",
+    "arrival": "9:55",
+    "distance": 9149
+  },
+  "flight36": {
+    "date": "September 2, 2018",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7989",
+    "origin": "PEK",
+    "departure": "16:00",
+    "destination": "SJC",
+    "arrival": "12:30",
+    "distance": 9551
+  },
+  "flight37": {
+    "date": "August 23, 2018",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8883",
+    "origin": "CTU",
+    "departure": "9:30",
+    "destination": "PEK",
+    "arrival": "12:15",
+    "distance": 1697
+  },
+  "flight38": {
+    "date": "August 22, 2018",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8006",
+    "origin": "DCY",
+    "departure": "8:00",
+    "destination": "CTU",
+    "arrival": "8:55",
+    "distance": 415
+  },
+  "flight39": {
+    "date": "August 20, 2018",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8021",
+    "origin": "CTU",
+    "departure": "7:00",
+    "destination": "DCY",
+    "arrival": "8:05",
+    "distance": 415
+  },
+  "flight40": {
+    "date": "August 14, 2018",
+    "airlines": "Air China",
+    "flightNo": "CA4110",
+    "origin": "PEK",
+    "departure": "19:00",
+    "destination": "CTU",
+    "arrival": "22:10",
+    "distance": 1697
+  },
+  "flight41": {
+    "date": "July 30, 2018",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3908",
+    "origin": "SHA",
+    "departure": "11:45",
+    "destination": "PEK",
+    "arrival": "14:10",
+    "distance": 1077
+  },
+  "flight42": {
+    "date": "July 27, 2018",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3907",
+    "origin": "PEK",
+    "departure": "8:20",
+    "destination": "SHA",
+    "arrival": "10:30",
+    "distance": 1077
+  },
+  "flight43": {
+    "date": "July 23, 2018",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7990",
+    "origin": "SJC",
+    "departure": "14:30",
+    "destination": "PEK",
+    "arrival": "17:40",
+    "distance": 9551
+  },
+  "flight44": {
+    "date": "June 8, 2018",
+    "airlines": "Chengdu Airlines",
+    "flightNo": "BA287",
+    "origin": "LHR",
+    "departure": "14:15",
+    "destination": "SFO",
+    "arrival": "17:20",
+    "distance": 8622
+  },
+  "flight45": {
+    "date": "May 24, 2018",
+    "airlines": "Chengdu Airlines",
+    "flightNo": "BA286",
+    "origin": "SFO",
+    "departure": "19:35",
+    "destination": "LHR",
+    "arrival": "14:00",
+    "distance": 8626
+  },
+  "flight46": {
+    "date": "May 7, 2018",
+    "airlines": "Virgin Atlantic Airways",
+    "flightNo": "VS41",
+    "origin": "LHR",
+    "departure": "13:10",
+    "destination": "SFO",
+    "arrival": "16:20",
+    "distance": 8622
+  },
+  "flight47": {
+    "date": "May 3, 2018",
+    "airlines": "Virgin Atlantic Airways",
+    "flightNo": "VS42",
+    "origin": "SFO",
+    "departure": "19:35",
+    "destination": "LHR",
+    "arrival": "13:55",
+    "distance": 8626
+  },
+  "flight48": {
+    "date": "April 1, 2018",
+    "airlines": "United Airlines",
+    "flightNo": "UA900",
+    "origin": "LHR",
+    "departure": "10:25",
+    "destination": "SFO",
+    "arrival": "13:35",
+    "distance": 8622
+  },
+  "flight49": {
+    "date": "March 24, 2018",
+    "airlines": "United Airlines",
+    "flightNo": "UA901",
+    "origin": "SFO",
+    "departure": "12:20",
+    "destination": "LHR",
+    "arrival": "6:55",
+    "distance": 8622
+  },
+  "flight50": {
+    "date": "February 12, 2018",
+    "airlines": "Virgin Atlantic Airways",
+    "flightNo": "VS19",
+    "origin": "LHR",
+    "departure": "12:00",
+    "destination": "SFO",
+    "arrival": "15:05",
+    "distance": 8622
+  },
+  "flight51": {
+    "date": "February 8, 2018",
+    "airlines": "Virgin Atlantic Airways",
+    "flightNo": "VS42",
+    "origin": "SFO",
+    "departure": "20:00",
+    "destination": "LHR",
+    "arrival": "14:10",
+    "distance": 8622
+  },
+  "flight52": {
+    "date": "January 5, 2018",
+    "airlines": "United Airlines",
+    "flightNo": "UA949",
+    "origin": "LHR",
+    "departure": "9:20",
+    "destination": "SFO",
+    "arrival": "12:25",
+    "distance": 8622
+  },
+  "flight53": {
+    "date": "January 3, 2018",
+    "airlines": "Lufthansa",
+    "flightNo": "LH936",
+    "origin": "FRA",
+    "departure": "17:20",
+    "destination": "LCY",
+    "arrival": "17:45",
+    "distance": 621
+  },
+  "flight54": {
+    "date": "January 3, 2018",
+    "airlines": "Lufthansa",
+    "flightNo": "LH721",
+    "origin": "PEK",
+    "departure": "11:30",
+    "destination": "FRA",
+    "arrival": "15:05",
+    "distance": 7789
+  },
+  "flight55": {
+    "date": "November 30, 2017",
+    "airlines": "Air China",
+    "flightNo": "CA758",
+    "origin": "BKK",
+    "departure": "16:55",
+    "destination": "PEK",
+    "arrival": "22:30",
+    "distance": 3310
+  },
+  "flight56": {
+    "date": "November 30, 2017",
+    "airlines": "Thai Airways",
+    "flightNo": "TG618",
+    "origin": "BKK",
+    "departure": "10:05",
+    "destination": "CTU",
+    "arrival": "14:00",
+    "distance": 1908
+  },
+  "flight57": {
+    "date": "November 27, 2017",
+    "airlines": "Thai Airways",
+    "flightNo": "TG619",
+    "origin": "CTU",
+    "departure": "15:05",
+    "destination": "BKK",
+    "arrival": "17:20",
+    "distance": 1908
+  },
+  "flight58": {
+    "date": "November 26, 2017",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3903",
+    "origin": "PEK",
+    "departure": "14:40",
+    "destination": "CTU",
+    "arrival": "17:50",
+    "distance": 1697
+  },
+  "flight59": {
+    "date": "November 15, 2017",
+    "airlines": "Air China",
+    "flightNo": "CA4117",
+    "origin": "CTU",
+    "departure": "17:00",
+    "destination": "PEK",
+    "arrival": "19:40",
+    "distance": 1697
+  },
+  "flight60": {
+    "date": "November 13, 2017",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6119",
+    "origin": "PEK",
+    "departure": "21:10",
+    "destination": "CTU",
+    "arrival": "0:20",
+    "distance": 1697
+  },
+  "flight61": {
+    "date": "November 11, 2017",
+    "airlines": "Lufthansa",
+    "flightNo": "LH720",
+    "origin": "FRA",
+    "departure": "17:15",
+    "destination": "PEK",
+    "arrival": "9:30",
+    "distance": 7789
+  },
+  "flight62": {
+    "date": "November 11, 2017",
+    "airlines": "Lufthansa",
+    "flightNo": "LH905",
+    "origin": "LHR",
+    "departure": "12:30",
+    "destination": "FRA",
+    "arrival": "15:05",
+    "distance": 637
+  },
+  "flight63": {
+    "date": "October 7, 2017",
+    "airlines": "Iberia Airlines",
+    "flightNo": "IB4237",
+    "origin": "LAX",
+    "departure": "19:55",
+    "destination": "LHR",
+    "arrival": "14:25",
+    "distance": 8769
+  },
+  "flight64": {
+    "date": "October 2, 2017",
+    "airlines": "American Airlines",
+    "flightNo": "AA6008",
+    "origin": "LAX",
+    "departure": "19:45",
+    "destination": "SJC",
+    "arrival": "21:02",
+    "distance": 494
+  },
+  "flight65": {
+    "date": "October 2, 2017",
+    "airlines": "Chengdu Airlines",
+    "flightNo": "BA1545",
+    "origin": "LHR",
+    "departure": "12:15",
+    "destination": "LAX",
+    "arrival": "15:40",
+    "distance": 8769
+  },
+  "flight66": {
+    "date": "September 16, 2017",
+    "airlines": "Air China",
+    "flightNo": "CA937",
+    "origin": "PEK",
+    "departure": "14:10",
+    "destination": "LHR",
+    "arrival": "17:45",
+    "distance": 8132
+  },
+  "flight67": {
+    "date": "August 18, 2017",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8883",
+    "origin": "CTU",
+    "departure": "9:30",
+    "destination": "PEK",
+    "arrival": "12:15",
+    "distance": 1697
+  },
+  "flight68": {
+    "date": "August 15, 2017",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7347",
+    "origin": "PEK",
+    "departure": "21:35",
+    "destination": "CTU",
+    "arrival": "0:45",
+    "distance": 1697
+  },
+  "flight69": {
+    "date": "August 15, 2017",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6119",
+    "origin": "PEK",
+    "departure": "21:25",
+    "destination": "CTU",
+    "arrival": "0:30",
+    "distance": 1697
+  },
+  "flight70": {
+    "date": "June 17, 2017",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7738",
+    "origin": "XIY",
+    "departure": "23:05",
+    "destination": "PEK",
+    "arrival": "0:55",
+    "distance": 936
+  },
+  "flight71": {
+    "date": "June 13, 2017",
+    "airlines": "China Eastern",
+    "flightNo": "MU2344",
+    "origin": "CTU",
+    "departure": "23:05",
+    "destination": "XIY",
+    "arrival": "0:40",
+    "distance": 606
+  },
+  "flight72": {
+    "date": "May 29, 2017",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7604",
+    "origin": "SHA",
+    "departure": "8:20",
+    "destination": "PEK",
+    "arrival": "10:35",
+    "distance": 1077
+  },
+  "flight73": {
+    "date": "May 28, 2017",
+    "airlines": "China Eastern",
+    "flightNo": "MU5112",
+    "origin": "PEK",
+    "departure": "13:00",
+    "destination": "SHA",
+    "arrival": "15:15",
+    "distance": 1077
+  },
+  "flight74": {
+    "date": "May 15, 2017",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7609",
+    "origin": "PEK",
+    "departure": "6:40",
+    "destination": "PVG",
+    "arrival": "8:55",
+    "distance": 1178
+  },
+  "flight75": {
+    "date": "April 3, 2017",
+    "airlines": "China Eastern",
+    "flightNo": "MU5115",
+    "origin": "SHA",
+    "departure": "15:00",
+    "destination": "PEK",
+    "arrival": "17:15",
+    "distance": 1077
+  },
+  "flight76": {
+    "date": "April 1, 2017",
+    "airlines": "Air China",
+    "flightNo": "CA1589",
+    "origin": "PEK",
+    "departure": "20:30",
+    "destination": "SHA",
+    "arrival": "22:40",
+    "distance": 1077
+  },
+  "flight77": {
+    "date": "February 10, 2017",
+    "airlines": "China West Air",
+    "flightNo": "PN6217",
+    "origin": "JHG",
+    "departure": "17:55",
+    "destination": "KMG",
+    "arrival": "19:05",
+    "distance": 450
+  },
+  "flight78": {
+    "date": "January 30, 2017",
+    "airlines": "Lucky Air",
+    "flightNo": "8L9902",
+    "origin": "KMG",
+    "departure": "20:50",
+    "destination": "JHG",
+    "arrival": "21:45",
+    "distance": 450
+  },
+  "flight79": {
+    "date": "January 30, 2017",
+    "airlines": "Lucky Air",
+    "flightNo": "8L9864",
+    "origin": "CKG",
+    "departure": "16:05",
+    "destination": "KMG",
+    "arrival": "17:40",
+    "distance": 649
+  },
+  "flight80": {
+    "date": "January 30, 2017",
+    "airlines": "China Express Airlines",
+    "flightNo": "G55001",
+    "origin": "PEK",
+    "departure": "6:25",
+    "destination": "CKG",
+    "arrival": "9:25",
+    "distance": 1640
+  },
+  "flight81": {
+    "date": "January 23, 2017",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6184",
+    "origin": "CTU",
+    "departure": "16:30",
+    "destination": "PEK",
+    "arrival": "19:10",
+    "distance": 1697
+  },
+  "flight82": {
+    "date": "January 19, 2017",
+    "airlines": "China Eastern",
+    "flightNo": "MU5444",
+    "origin": "KGT",
+    "departure": "11:00",
+    "destination": "CTU",
+    "arrival": "12:00",
+    "distance": 283
+  },
+  "flight83": {
+    "date": "January 16, 2017",
+    "airlines": "China Eastern",
+    "flightNo": "MU5443",
+    "origin": "CTU",
+    "departure": "9:10",
+    "destination": "KGT",
+    "arrival": "10:05",
+    "distance": 283
+  },
+  "flight84": {
+    "date": "January 15, 2017",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8882",
+    "origin": "PEK",
+    "departure": "11:10",
+    "destination": "CTU",
+    "arrival": "14:20",
+    "distance": 1697
+  },
+  "flight85": {
+    "date": "November 23, 2016",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6120",
+    "origin": "CTU",
+    "departure": "8:55",
+    "destination": "PEK",
+    "arrival": "11:40",
+    "distance": 1697
+  },
+  "flight86": {
+    "date": "November 20, 2016",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6135",
+    "origin": "PEK",
+    "departure": "16:50",
+    "destination": "CTU",
+    "arrival": "20:10",
+    "distance": 1697
+  },
+  "flight87": {
+    "date": "August 20, 2016",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6184",
+    "origin": "CTU",
+    "departure": "16:50",
+    "destination": "PEK",
+    "arrival": "19:40",
+    "distance": 1697
+  },
+  "flight88": {
+    "date": "August 18, 2016",
+    "airlines": "China Eastern",
+    "flightNo": "MU2192",
+    "origin": "DCY",
+    "departure": "8:15",
+    "destination": "CTU",
+    "arrival": "9:15",
+    "distance": 415
+  },
+  "flight89": {
+    "date": "August 9, 2016",
+    "airlines": "China Eastern",
+    "flightNo": "MU2129",
+    "origin": "PEK",
+    "departure": "6:35",
+    "destination": "LHW",
+    "arrival": "9:10",
+    "distance": 1356
+  },
+  "flight90": {
+    "date": "June 11, 2016",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6184",
+    "origin": "CTU",
+    "departure": "16:50",
+    "destination": "PEK",
+    "arrival": "19:40",
+    "distance": 1697
+  },
+  "flight91": {
+    "date": "June 6, 2016",
+    "airlines": "Hong Kong Airlines",
+    "flightNo": "HX312",
+    "origin": "HKG",
+    "departure": "15:35",
+    "destination": "PEK",
+    "arrival": "19:10",
+    "distance": 1993
+  },
+  "flight92": {
+    "date": "June 3, 2016",
+    "airlines": "Hong Kong Airlines",
+    "flightNo": "HX305",
+    "origin": "PEK",
+    "departure": "7:50",
+    "destination": "HKG",
+    "arrival": "11:30",
+    "distance": 1993
+  },
+  "flight93": {
+    "date": "February 15, 2016",
+    "airlines": "Air China",
+    "flightNo": "CA3924",
+    "origin": "LXA",
+    "departure": "23:05",
+    "destination": "CTU",
+    "arrival": "1:05",
+    "distance": 1334
+  },
+  "flight94": {
+    "date": "February 8, 2016",
+    "airlines": "Air China",
+    "flightNo": "CA4401",
+    "origin": "CTU",
+    "departure": "7:10",
+    "destination": "LXA",
+    "arrival": "9:45",
+    "distance": 1334
+  },
+  "flight95": {
+    "date": "February 2, 2016",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3117",
+    "origin": "WUH",
+    "departure": "8:00",
+    "destination": "PEK",
+    "arrival": "9:55",
+    "distance": 1133
+  },
+  "flight96": {
+    "date": "January 17, 2016",
+    "airlines": "Air China",
+    "flightNo": "CA1833",
+    "origin": "PEK",
+    "departure": "11:35",
+    "destination": "XMN",
+    "arrival": "14:40",
+    "distance": 1774
+  },
+  "flight97": {
+    "date": "September 7, 2015",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3191",
+    "origin": "SZX",
+    "departure": "17:30",
+    "destination": "PEK",
+    "arrival": "21:00",
+    "distance": 2077
+  },
+  "flight98": {
+    "date": "August 24, 2015",
+    "airlines": "China Eastern",
+    "flightNo": "MU2652",
+    "origin": "CTU",
+    "departure": "16:25",
+    "destination": "WUH",
+    "arrival": "18:20",
+    "distance": 1047
+  },
+  "flight99": {
+    "date": "August 20, 2015",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6119",
+    "origin": "PEK",
+    "departure": "21:35",
+    "destination": "CTU",
+    "arrival": "0:30",
+    "distance": 1697
+  },
+  "flight100": {
+    "date": "July 31, 2015",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3191",
+    "origin": "SZX",
+    "departure": "17:30",
+    "destination": "PEK",
+    "arrival": "21:00",
+    "distance": 2077
+  },
+  "flight101": {
+    "date": "March 3, 2015",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3444",
+    "origin": "CTU",
+    "departure": "16:05",
+    "destination": "CAN",
+    "arrival": "18:25",
+    "distance": 1390
+  },
+  "flight102": {
+    "date": "February 27, 2015",
+    "airlines": "Air China",
+    "flightNo": "CA1425",
+    "origin": "PEK",
+    "departure": "17:00",
+    "destination": "CTU",
+    "arrival": "20:10",
+    "distance": 1697
+  },
+  "flight103": {
+    "date": "February 11, 2015",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3999",
+    "origin": "CAN",
+    "departure": "15:00",
+    "destination": "PEK",
+    "arrival": "18:15",
+    "distance": 1967
+  },
+  "flight104": {
+    "date": "July 16, 2014",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8889",
+    "origin": "CTU",
+    "departure": "16:30",
+    "destination": "PEK",
+    "arrival": "19:25",
+    "distance": 1697
+  },
+  "flight105": {
+    "date": "July 8, 2014",
+    "airlines": "Chengdu Airlines",
+    "flightNo": "EU2712",
+    "origin": "WUH",
+    "departure": "16:00",
+    "destination": "CTU",
+    "arrival": "18:05",
+    "distance": 1047
+  },
+  "flight106": {
+    "date": "February 24, 2014",
+    "airlines": "Chengdu Airlines",
+    "flightNo": "EU2711",
+    "origin": "CTU",
+    "departure": "15:40",
+    "destination": "WUH",
+    "arrival": "17:20",
+    "distance": 1047
+  },
+  "flight107": {
+    "date": "February 8, 2014",
+    "airlines": "Orient Thai Airlines",
+    "flightNo": "OX880",
+    "origin": "KBV",
+    "departure": "18:23",
+    "destination": "CTU",
+    "arrival": "18:23",
+    "distance": 2555
+  },
+  "flight108": {
+    "date": "February 3, 2014",
+    "airlines": "Orient Thai Airlines",
+    "flightNo": "OX881",
+    "origin": "CTU",
+    "departure": "9:27",
+    "destination": "HKT",
+    "arrival": "9:27",
+    "distance": 2578
+  },
+  "flight109": {
+    "date": "October 20, 2013",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8890",
+    "origin": "PEK",
+    "departure": "20:30",
+    "destination": "CTU",
+    "arrival": "23:25",
+    "distance": 1697
+  },
+  "flight110": {
+    "date": "October 17, 2013",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7148",
+    "origin": "CTU",
+    "departure": "11:50",
+    "destination": "PEK",
+    "arrival": "14:20",
+    "distance": 1697
+  },
+  "flight111": {
+    "date": "July 15, 2013",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8657",
+    "origin": "CTU",
+    "departure": "12:05",
+    "destination": "LXA",
+    "arrival": "14:00",
+    "distance": 1334
+  },
+  "flight112": {
+    "date": "July 2, 2013",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7141",
+    "origin": "PEK",
+    "departure": "17:10",
+    "destination": "CTU",
+    "arrival": "20:00",
+    "distance": 1697
+  },
+  "flight113": {
+    "date": "June 12, 2013",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ3904",
+    "origin": "CTU",
+    "departure": "19:45",
+    "destination": "PEK",
+    "arrival": "22:25",
+    "distance": 1697
+  },
+  "flight114": {
+    "date": "June 8, 2013",
+    "airlines": "Air China",
+    "flightNo": "CA1423",
+    "origin": "PEK",
+    "departure": "20:05",
+    "destination": "CTU",
+    "arrival": "22:55",
+    "distance": 1697
+  },
+  "flight115": {
+    "date": "February 26, 2013",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7142",
+    "origin": "CTU",
+    "departure": "20:55",
+    "destination": "PEK",
+    "arrival": "23:35",
+    "distance": 1697
+  },
+  "flight116": {
+    "date": "January 26, 2013",
+    "airlines": "Air China",
+    "flightNo": "CA4104",
+    "origin": "PEK",
+    "departure": "18:00",
+    "destination": "CTU",
+    "arrival": "21:05",
+    "distance": 1697
+  },
+  "flight117": {
+    "date": "December 24, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8881",
+    "origin": "CTU",
+    "departure": "7:30",
+    "destination": "PEK",
+    "arrival": "10:05",
+    "distance": 1697
+  },
+  "flight118": {
+    "date": "December 19, 2012",
+    "airlines": "Hainan Airline",
+    "flightNo": "HU7141",
+    "origin": "PEK",
+    "departure": "17:05",
+    "destination": "CTU",
+    "arrival": "19:55",
+    "distance": 1697
+  },
+  "flight119": {
+    "date": "October 8, 2012",
+    "airlines": "China Southern Airlines",
+    "flightNo": "CZ6162",
+    "origin": "CTU",
+    "departure": "12:20",
+    "destination": "PEK",
+    "arrival": "14:45",
+    "distance": 1697
+  },
+  "flight120": {
+    "date": "August 24, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8883",
+    "origin": "CTU",
+    "departure": "9:30",
+    "destination": "PEK",
+    "arrival": "12:05",
+    "distance": 1697
+  },
+  "flight121": {
+    "date": "August 15, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8894",
+    "origin": "PEK",
+    "departure": "19:20",
+    "destination": "CTU",
+    "arrival": "22:15",
+    "distance": 1697
+  },
+  "flight122": {
+    "date": "July 24, 2012",
+    "airlines": "Air China",
+    "flightNo": "CA1222",
+    "origin": "LHW",
+    "departure": "19:40",
+    "destination": "PEK",
+    "arrival": "22:10",
+    "distance": 1356
+  },
+  "flight123": {
+    "date": "July 9, 2012",
+    "airlines": "China Eastern",
+    "flightNo": "MU5300",
+    "origin": "PEK",
+    "departure": "21:55",
+    "destination": "TYN",
+    "arrival": "23:05",
+    "distance": 522
+  },
+  "flight124": {
+    "date": "May 27, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8547",
+    "origin": "CTU",
+    "departure": "20:30",
+    "destination": "PEK",
+    "arrival": "23:40",
+    "distance": 1697
+  },
+  "flight125": {
+    "date": "May 25, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8884",
+    "origin": "PEK",
+    "departure": "13:10",
+    "destination": "CTU",
+    "arrival": "16:00",
+    "distance": 1697
+  },
+  "flight126": {
+    "date": "February 12, 2012",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8883",
+    "origin": "CTU",
+    "departure": "9:30",
+    "destination": "PEK",
+    "arrival": "12:05",
+    "distance": 1697
+  },
+  "flight127": {
+    "date": "July 14, 2011",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8657",
+    "origin": "CTU",
+    "departure": "12:05",
+    "destination": "LXA",
+    "arrival": "14:00",
+    "distance": 1334
+  },
+  "flight128": {
+    "date": "February 16, 2011",
+    "airlines": "Air China",
+    "flightNo": "CA4119",
+    "origin": "CTU",
+    "departure": "18:00",
+    "destination": "PEK",
+    "arrival": "20:30",
+    "distance": 1697
+  },
+  "flight129": {
+    "date": "February 9, 2011",
+    "airlines": "Sichuan Airlines",
+    "flightNo": "3U8886",
+    "origin": "PEK",
+    "departure": "15:20",
+    "destination": "CTU",
+    "arrival": "18:15",
+    "distance": 1697
+  }
+}

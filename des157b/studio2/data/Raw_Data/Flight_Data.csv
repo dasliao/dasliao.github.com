@@ -1,0 +1,130 @@
+﻿,date,airlines,flightNo,origin,departure,destination,arrival,distance
+flight1,"January 8, 2022",Lufthansa,LH454,FRA,10:05,SFO,12:30,9171
+flight2,"January 7, 2022",Lufthansa,LH161,LEJ,10:40,FRA,11:40,300
+flight3,"December 12, 2021",Lufthansa,LH2170,MUC,21:35,LEJ,22:30,342
+flight4,"December 11, 2021",Lufthansa,LH459,SFO,22:40,MUC,18:50,9437
+flight5,"September 24, 2021",Southwest Airline,WN4305,LAX,20:10,SMF,21:35,600
+flight6,"September 23, 2021",Southwest Airline,WN1072,SMF,21:45,LAX,23:10,600
+flight7,"January 1, 2021",United Airlines,UA544,DEN,11:15,SMF,12:55,1463
+flight8,"December 21, 2020",United Airlines,UA404,SFO,18:40,SAN,20:10,719
+flight9,"December 21, 2020",United Airlines,UA5559,SMF,16:15,SFO,17:18,138
+flight10,"September 3, 2020",Alaska Airline,AS3428,SAN,16:45,SJC,18:10,650
+flight11,"December 31, 2019",Turkish Airlines,TK79,IST,13:55,SFO,16:35,10925
+flight12,"December 31, 2019",Turkish Airlines,TK1598,FRA,7:40,IST,12:50,1881
+flight13,"December 17, 2019",Turkish Airlines,TK1597,IST,20:45,FRA,22:05,1881
+flight14,"December 16, 2019",Turkish Airlines,TK80,SFO,18:15,IST,18:10,10810
+flight15,"September 22, 2019",Hainan Airline,HU7989,PEK,15:50,SJC,12:30,9551
+flight16,"September 20, 2019",China Southern Airlines,CZ6136,CTU,21:30,PEK,0:25,1697
+flight17,"September 20, 2019",China Southern Airlines,CZ6136,CTU,21:30,PEK,0:25,1697
+flight18,"September 19, 2019",Lucky Air,8L9666,LXA,11:45,CTU,13:45,1334
+flight19,"September 18, 2019",Tibet Airlines,TV9853,CTU,6:05,LXA,8:15,1334
+flight20,"September 11, 2019",Sichuan Airlines,3U8448,SGN,4:30,CTU,8:50,2228
+flight21,"September 4, 2019",China Eastern,MU281,PVG,22:00,SGN,1:35,2749
+flight22,"September 4, 2019",Hainan Airline,HU7611,PEK,7:40,PVG,9:55,1178
+flight23,"August 29, 2019",Hainan Airline,HU7248,CTU,20:00,PEK,22:55,1697
+flight24,"August 23, 2019",Hainan Airline,HU7347,PEK,21:35,CTU,0:40,1697
+flight25,"August 9, 2019",Hainan Airline,HU7990,SJC,14:30,PEK,18:00,9551
+flight26,"June 10, 2019",Hainan Airline,HU7989,PEK,15:50,SJC,12:30,9551
+flight27,"June 7, 2019",Hainan Airline,HU7990,SJC,14:30,PEK,18:00,9551
+flight28,"April 7, 2019",Hainan Airline,HU7989,PEK,15:50,SJC,12:30,9551
+flight29,"April 6, 2019",Hainan Airline,HU7248,CTU,20:30,PEK,23:25,1697
+flight30,"April 3, 2019",Hainan Airline,HU7347,PEK,21:35,CTU,0:40,1697
+flight31,"March 29, 2019",Hainan Airline,HU7990,SJC,14:30,PEK,18:05,9551
+flight32,"December 24, 2018",United Airlines,UA927,FRA,17:25,SFO,20:00,9149
+flight33,"December 24, 2018",Lufthansa,LH943,MAN,12:35,FRA,15:15,833
+flight34,"December 15, 2018",Lufthansa,LH942,FRA,11:25,MAN,12:10,833
+flight35,"December 14, 2018",United Airlines,UA58,SFO,13:45,FRA,9:55,9149
+flight36,"September 2, 2018",Hainan Airline,HU7989,PEK,16:00,SJC,12:30,9551
+flight37,"August 23, 2018",Sichuan Airlines,3U8883,CTU,9:30,PEK,12:15,1697
+flight38,"August 22, 2018",Sichuan Airlines,3U8006,DCY,8:00,CTU,8:55,415
+flight39,"August 20, 2018",Sichuan Airlines,3U8021,CTU,7:00,DCY,8:05,415
+flight40,"August 14, 2018",Air China,CA4110,PEK,19:00,CTU,22:10,1697
+flight41,"July 30, 2018",China Southern Airlines,CZ3908,SHA,11:45,PEK,14:10,1077
+flight42,"July 27, 2018",China Southern Airlines,CZ3907,PEK,8:20,SHA,10:30,1077
+flight43,"July 23, 2018",Hainan Airline,HU7990,SJC,14:30,PEK,17:40,9551
+flight44,"June 8, 2018",Chengdu Airlines,BA287,LHR,14:15,SFO,17:20,8622
+flight45,"May 24, 2018",Chengdu Airlines,BA286,SFO,19:35,LHR,14:00,8626
+flight46,"May 7, 2018",Virgin Atlantic Airways,VS41,LHR,13:10,SFO,16:20,8622
+flight47,"May 3, 2018",Virgin Atlantic Airways,VS42,SFO,19:35,LHR,13:55,8626
+flight48,"April 1, 2018",United Airlines,UA900,LHR,10:25,SFO,13:35,8622
+flight49,"March 24, 2018",United Airlines,UA901,SFO,12:20,LHR,6:55,8622
+flight50,"February 12, 2018",Virgin Atlantic Airways,VS19,LHR,12:00,SFO,15:05,8622
+flight51,"February 8, 2018",Virgin Atlantic Airways,VS42,SFO,20:00,LHR,14:10,8622
+flight52,"January 5, 2018",United Airlines,UA949,LHR,9:20,SFO,12:25,8622
+flight53,"January 3, 2018",Lufthansa,LH936,FRA,17:20,LCY,17:45,621
+flight54,"January 3, 2018",Lufthansa,LH721,PEK,11:30,FRA,15:05,7789
+flight55,"November 30, 2017",Air China,CA758,BKK,16:55,PEK,22:30,3310
+flight56,"November 30, 2017",Thai Airways,TG618,BKK,10:05,CTU,14:00,1908
+flight57,"November 27, 2017",Thai Airways,TG619,CTU,15:05,BKK,17:20,1908
+flight58,"November 26, 2017",China Southern Airlines,CZ3903,PEK,14:40,CTU,17:50,1697
+flight59,"November 15, 2017",Air China,CA4117,CTU,17:00,PEK,19:40,1697
+flight60,"November 13, 2017",China Southern Airlines,CZ6119,PEK,21:10,CTU,0:20,1697
+flight61,"November 11, 2017",Lufthansa,LH720,FRA,17:15,PEK,9:30,7789
+flight62,"November 11, 2017",Lufthansa,LH905,LHR,12:30,FRA,15:05,637
+flight63,"October 7, 2017",Iberia Airlines,IB4237,LAX,19:55,LHR,14:25,8769
+flight64,"October 2, 2017",American Airlines,AA6008,LAX,19:45,SJC,21:02,494
+flight65,"October 2, 2017",Chengdu Airlines,BA1545,LHR,12:15,LAX,15:40,8769
+flight66,"September 16, 2017",Air China,CA937,PEK,14:10,LHR,17:45,8132
+flight67,"August 18, 2017",Sichuan Airlines,3U8883,CTU,9:30,PEK,12:15,1697
+flight68,"August 15, 2017",Hainan Airline,HU7347,PEK,21:35,CTU,0:45,1697
+flight69,"August 15, 2017",China Southern Airlines,CZ6119,PEK,21:25,CTU,0:30,1697
+flight70,"June 17, 2017",Hainan Airline,HU7738,XIY,23:05,PEK,0:55,936
+flight71,"June 13, 2017",China Eastern,MU2344,CTU,23:05,XIY,0:40,606
+flight72,"May 29, 2017",Hainan Airline,HU7604,SHA,8:20,PEK,10:35,1077
+flight73,"May 28, 2017",China Eastern,MU5112,PEK,13:00,SHA,15:15,1077
+flight74,"May 15, 2017",Hainan Airline,HU7609,PEK,6:40,PVG,8:55,1178
+flight75,"April 3, 2017",China Eastern,MU5115,SHA,15:00,PEK,17:15,1077
+flight76,"April 1, 2017",Air China,CA1589,PEK,20:30,SHA,22:40,1077
+flight77,"February 10, 2017",China West Air,PN6217,JHG,17:55,KMG,19:05,450
+flight78,"January 30, 2017",Lucky Air,8L9902,KMG,20:50,JHG,21:45,450
+flight79,"January 30, 2017",Lucky Air,8L9864,CKG,16:05,KMG,17:40,649
+flight80,"January 30, 2017",China Express Airlines,G55001,PEK,6:25,CKG,9:25,1640
+flight81,"January 23, 2017",China Southern Airlines,CZ6184,CTU,16:30,PEK,19:10,1697
+flight82,"January 19, 2017",China Eastern,MU5444,KGT,11:00,CTU,12:00,283
+flight83,"January 16, 2017",China Eastern,MU5443,CTU,9:10,KGT,10:05,283
+flight84,"January 15, 2017",Sichuan Airlines,3U8882,PEK,11:10,CTU,14:20,1697
+flight85,"November 23, 2016",China Southern Airlines,CZ6120,CTU,8:55,PEK,11:40,1697
+flight86,"November 20, 2016",China Southern Airlines,CZ6135,PEK,16:50,CTU,20:10,1697
+flight87,"August 20, 2016",China Southern Airlines,CZ6184,CTU,16:50,PEK,19:40,1697
+flight88,"August 18, 2016",China Eastern,MU2192,DCY,8:15,CTU,9:15,415
+flight89,"August 9, 2016",China Eastern,MU2129,PEK,6:35,LHW,9:10,1356
+flight90,"June 11, 2016",China Southern Airlines,CZ6184,CTU,16:50,PEK,19:40,1697
+flight91,"June 6, 2016",Hong Kong Airlines,HX312,HKG,15:35,PEK,19:10,1993
+flight92,"June 3, 2016",Hong Kong Airlines,HX305,PEK,7:50,HKG,11:30,1993
+flight93,"February 15, 2016",Air China,CA3924,LXA,23:05,CTU,1:05,1334
+flight94,"February 8, 2016",Air China,CA4401,CTU,7:10,LXA,9:45,1334
+flight95,"February 2, 2016",China Southern Airlines,CZ3117,WUH,8:00,PEK,9:55,1133
+flight96,"January 17, 2016",Air China,CA1833,PEK,11:35,XMN,14:40,1774
+flight97,"September 7, 2015",China Southern Airlines,CZ3191,SZX,17:30,PEK,21:00,2077
+flight98,"August 24, 2015",China Eastern,MU2652,CTU,16:25,WUH,18:20,1047
+flight99,"August 20, 2015",China Southern Airlines,CZ6119,PEK,21:35,CTU,0:30,1697
+flight100,"July 31, 2015",China Southern Airlines,CZ3191,SZX,17:30,PEK,21:00,2077
+flight101,"March 3, 2015",China Southern Airlines,CZ3444,CTU,16:05,CAN,18:25,1390
+flight102,"February 27, 2015",Air China,CA1425,PEK,17:00,CTU,20:10,1697
+flight103,"February 11, 2015",China Southern Airlines,CZ3999,CAN,15:00,PEK,18:15,1967
+flight104,"July 16, 2014",Sichuan Airlines,3U8889,CTU,16:30,PEK,19:25,1697
+flight105,"July 8, 2014",Chengdu Airlines,EU2712,WUH,16:00,CTU,18:05,1047
+flight106,"February 24, 2014",Chengdu Airlines,EU2711,CTU,15:40,WUH,17:20,1047
+flight107,"February 8, 2014",Orient Thai Airlines,OX880,KBV,18:23,CTU,18:23,2555
+flight108,"February 3, 2014",Orient Thai Airlines,OX881,CTU,9:27,HKT,9:27,2578
+flight109,"October 20, 2013",Sichuan Airlines,3U8890,PEK,20:30,CTU,23:25,1697
+flight110,"October 17, 2013",Hainan Airline,HU7148,CTU,11:50,PEK,14:20,1697
+flight111,"July 15, 2013",Sichuan Airlines,3U8657,CTU,12:05,LXA,14:00,1334
+flight112,"July 2, 2013",Hainan Airline,HU7141,PEK,17:10,CTU,20:00,1697
+flight113,"June 12, 2013",China Southern Airlines,CZ3904,CTU,19:45,PEK,22:25,1697
+flight114,"June 8, 2013",Air China,CA1423,PEK,20:05,CTU,22:55,1697
+flight115,"February 26, 2013",Hainan Airline,HU7142,CTU,20:55,PEK,23:35,1697
+flight116,"January 26, 2013",Air China,CA4104,PEK,18:00,CTU,21:05,1697
+flight117,"December 24, 2012",Sichuan Airlines,3U8881,CTU,7:30,PEK,10:05,1697
+flight118,"December 19, 2012",Hainan Airline,HU7141,PEK,17:05,CTU,19:55,1697
+flight119,"October 8, 2012",China Southern Airlines,CZ6162,CTU,12:20,PEK,14:45,1697
+flight120,"August 24, 2012",Sichuan Airlines,3U8883,CTU,9:30,PEK,12:05,1697
+flight121,"August 15, 2012",Sichuan Airlines,3U8894,PEK,19:20,CTU,22:15,1697
+flight122,"July 24, 2012",Air China,CA1222,LHW,19:40,PEK,22:10,1356
+flight123,"July 9, 2012",China Eastern,MU5300,PEK,21:55,TYN,23:05,522
+flight124,"May 27, 2012",Sichuan Airlines,3U8547,CTU,20:30,PEK,23:40,1697
+flight125,"May 25, 2012",Sichuan Airlines,3U8884,PEK,13:10,CTU,16:00,1697
+flight126,"February 12, 2012",Sichuan Airlines,3U8883,CTU,9:30,PEK,12:05,1697
+flight127,"July 14, 2011",Sichuan Airlines,3U8657,CTU,12:05,LXA,14:00,1334
+flight128,"February 16, 2011",Air China,CA4119,CTU,18:00,PEK,20:30,1697
+flight129,"February 9, 2011",Sichuan Airlines,3U8886,PEK,15:20,CTU,18:15,1697
