@@ -185,7 +185,7 @@
                             expand[j].className = 'fas fa-chevron-down';
                             trips[j].className = "trips listed";
                             details[j].className = 'details hidden';
-                            map.removeOverlay();
+                            // map.removeOverlay();
                         }
                     }
                     expand[i].className = 'fas fa-chevron-up';
