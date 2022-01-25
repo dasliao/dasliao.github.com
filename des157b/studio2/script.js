@@ -9,7 +9,7 @@
     //Remember to update token before upload to github
     
 
-    const mapKitJSTokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Iks2Qkg4Mlg3MlYuIn0.eyJpc3MiOiJENE45NzVFNzU5IiwiaWF0IjoxNjQzMTM5Njg1LCJleHAiOjE2NDg1OTg0MDAsIm9yaWdpbiI6Imh0dHBzOi8vZGFzbGlhby5naXRodWIuaW8ifQ.TfphFnNjKnfVe2Ge3IIon7tGf0NTE52y1XvlAX4_jNJjvNz-gc7yf3FgElJwUoEMoK6ETbdQwz8hQPg-Grkq3A";
+    const mapKitJSTokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Iks2Qkg4Mlg3MlYifQ.eyJpc3MiOiJENE45NzVFNzU5IiwiaWF0IjoxNjQzMTQwNTQ5LCJleHAiOjE2NDg1OTg0MDAsIm9yaWdpbiI6Imh0dHBzOi8vZGFzbGlhby5naXRodWIuaW8ifQ.Yh7npbWb0RGdRscroztmeGw-oMgNG4imr7rFwPvRGMcBN1_iuggQih8nA5KX2IRKRu42M65A0Fi3PmxsxGEIjw";
 
     function EachTravel(details) {
         this.travelDetails = details;
