@@ -156,6 +156,9 @@
             setTimeout(function(){
                 document.getElementById('mapInitializer').innerText = '';
                 document.querySelector('footer').style.backgroundColor = '';
+                document.querySelectorAll('footer a').forEach(function(eachA){
+                    eachA.style.color ='#7296a8';
+                });
             },2000)
             // console.log(globalData);
             // console.log(markedAirport);
