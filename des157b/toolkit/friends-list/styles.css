@@ -92,6 +92,7 @@ a {
     top: 20px;
     right: 20px;
     color:#0746a5;
+    cursor: pointer;
 }
 
 .fa-times-circle {
