@@ -88,6 +88,10 @@ button:hover {
     justify-content: space-between;
 }
 
+#right.hidden {
+    display: none;
+}
+
 #quote-container {
     display: flex;
     justify-content: flex-start;
@@ -120,5 +124,32 @@ button:hover {
 
 #author {
     font-size: 1.5em;
+    font-weight: 100;
+}
+
+#saved-quotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    position: relative;
+    padding: 50px 50px;
+    height: 100%;
+    background-color: lightslategray;
+}
+
+.quotes-box {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.quotes {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.authors {
+    font-size: 1em;
     font-weight: 100;
 }
