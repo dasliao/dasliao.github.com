@@ -1,6 +1,8 @@
 (function(){
     // ************************ Vars & DOM *****************************
-
+    let currentQuote, currentAuthor, currentUrl;
+    let currentUser;
+    let quoteRecords;
 
     // ************************ Initiate *****************************
     Parse.initialize("1KeaItVqFLSYamBOBEHQttvnIMbJ9HMDsil2YPSz", "rd2kGzZZf8TPYwbMmCe4rfqFgUSpaJxemTuVGr7H"); 
@@ -25,8 +27,46 @@
     });
 
     document.getElementById('shuffle-quote').addEventListener('click',function() {
-        document.getElementById('shuffle-quote').reload();
+        gettingQuote();
     })
+
+    document.getElementById('save-quote').addEventListener('click', function(){
+            currentQuote = document.getElementById('quote').innerText;
+            currentAuthor = document.getElementById('author').innerText;
+            currentUrl = document.getElementById('author').href;
+            console.log(currentQuote, currentAuthor, currentUrl);
+            savingQuote(currentQuote, currentAuthor, currentUrl);
+    });
+
+    document.getElementById('saved-quotes-btn').addEventListener('click',async function(){
+        quoteRecords = await getQuoteRecords(); 
+        if(quoteRecords) {
+            for(let i = 0; i < quoteRecords.length; i++) {
+                let div = document.createElement('div');
+                div.setAttribute('id', `quote-${i}`);
+                div.className = 'quotes-box';
+                let q = document.createElement('p');
+                let a = document.createElement('a');
+                q.className = 'quotes';
+                a.className = 'authors';
+                q.innerText = quoteRecords[i].quote;
+                a.innerText = quoteRecords[i].author;
+                a.href = quoteRecords[i].url;
+                div.appendChild(q);
+                div.appendChild(a);
+                document.getElementById('saved-quotes').appendChild(div);
+            }
+            document.getElementById('right').className = 'hidden';
+            document.getElementById('saved-quotes').removeAttribute('class');
+        }
+        
+    });
+
+    document.getElementById('todays-quotes-btn').addEventListener('click',function(){
+        document.getElementById('saved-quotes').className = 'hidden';
+        document.getElementById('right').removeAttribute('class');
+        document.getElementById('saved-quotes').innerHTML = '';
+    });
 
     // ************************ Funtion *****************************
     function getCookie(cookieName) {
@@ -51,11 +91,13 @@
             const loggedInUser = await Parse.User.become(s);
             if(loggedInUser){
                 console.log(loggedInUser);
+                currentUser = loggedInUser;
                 document.getElementById('profile-pic').setAttribute('src', `https://picsum.photos/seed/${loggedInUser.id}/200`);
                 setTimeout(function() {
                     document.getElementById('profile-pic').style.opacity = 1;
                 },500)
                 document.getElementById('name').innerText = `@${loggedInUser.getUsername()}`;
+                
             } else {
                 
             }
@@ -70,13 +112,77 @@
 
     async function gettingQuote() {
         try {
-            let response = await fetch('https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?');
-            let quote = await promise.json();
+            const response = await fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "quotes15.p.rapidapi.com",
+                    "x-rapidapi-key": "daee9edf21mshb6d5e74c61fe7f3p117ed0jsn7fdd1eccd5ba"
+                }
+            });  
+            const quote = await response.json();
             console.log(quote);
+            document.getElementById('quote').innerText = quote.content;
+            document.getElementById('author').innerText = quote.originator.name;
+            document.getElementById('author').href = quote.originator.url;
+            return quote;
         }catch(error) {
             console.log('Quote', error);
         }
     }
 
+    async function savingQuote(quote, author, url) {
+        const User = new Parse.User();
+        const query = new Parse.Query(User);      
+        
+        try {
+            let current = {
+                'quote': quote,
+                'author': author,
+                'url':url
+            }
+            let user = await query.get(currentUser.id);
+
+            let quotes = await user.get('quotesaved');
+            console.log(quotes);
+            if(quotes) {
+                let checkDup = false;
+                for(let i = 0; i < quotes.length; i++) {
+                    if (quotes[i].quote === current.quote) {
+                        checkDup = true;
+                        break;
+                    }
+                }
+                if(!checkDup) {
+                    quotes.push(current);
+                }
+            } else {
+                quotes = [current]
+            }
+            // console.log(quotes);
+            user.set('quotesaved', quotes);
+            try {
+                // Saves the user with the updated data
+                let response = await user.save();
+                console.log('Updated user', response);
+                return quotes;
+              } catch (error) {
+                console.error('Error while updating user', error);
+            }
+        } catch(error) {
+            console.log('Saving Quote', error)
+        }
+    }
     
+    async function getQuoteRecords() {
+        const User = new Parse.User();
+        const query = new Parse.Query(User);
+        try {
+            let user = await query.get(currentUser.id);
+            let quotes = await user.get('quotesaved');
+            return quotes;
+        } catch(error) {
+            console.log('Getting Records', error);
+        }
+    }
+
 })();
