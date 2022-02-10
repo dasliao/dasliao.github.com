@@ -1,24 +1,33 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0%;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: 100vh;
+}
+
+#input-section {
+    background-color: lightslategray;
+    padding: 60px 80px;
 }
 
 #form-container {
-    background-color: lightslategray;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 80px;
 }
 
 form {
@@ -52,10 +61,15 @@ form {
     border: none;
     border-bottom: 3px solid rgb(176, 202, 228);
     text-indent: 10px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 300;
     text-align: center;
     padding: 10px;
+    color: whitesmoke;
+}
+
+.inputbox:hover {
+    border-bottom: 3px solid white;
 }
 
 .inputbox:focus {
@@ -64,19 +78,19 @@ form {
 }
 
 .inputbox-container label {
-    font-size: 2em;
-    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    color: rgb(199, 216, 238);
 }
 
 #btn-container {
     display: flex;
     flex-direction: column;
-    
     justify-content: flex-start;
     width: 80%;
 }
 
-#signup-btn {
+#go-to-signup-btn {
     text-decoration: none;
     color: black;
     font-size: 1em;
@@ -84,7 +98,7 @@ form {
     margin-top: 30px;
 }
 
-#login-btn {
+input[type=submit] {
     text-decoration: underline;
     background: none;
     border: hidden;
@@ -93,4 +107,18 @@ form {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     color: white;
+}
+
+input[type=submit]:hover {
+    color: black;
+}
+
+#error-message.visible {
+    color: black;
+    background-color: yellow;
+    padding: 5px 10px;
+}
+
+#error-message.hidden {
+    background-color: rgba(255, 255, 0, 0);
 }

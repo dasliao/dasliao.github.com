@@ -8,43 +8,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="handf-style.css">
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script src="https://kit.fontawesome.com/0ccf362059.js" crossorigin="anonymous"></script>
-    <script src="scripts.js" defer></script>
-    <title>Sample 2 - create account</title>
-    <style>
-        #profile-image {
-            border-radius: 100px;
-        }
-    </style>
-    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- <script src="signup-scripts.js" defer></script> -->
+    <title>Create an Account</title>
 </head>
 <body>
     <div id="container">
         <main>
-            <form id="register">
-                <label for="email-input">Email</label>
-                <input type="email" name="email" id="email">
+            <section id="input-section">
+                <div id="form-container" >
+                    <i class="fa-brands fa-buromobelexperte"></i>
+                    <form id="register">
+                        <div class="inputbox-container">
+                            <input class="inputbox" type="email" name="email" id="email-sign-up">
+                            <label for="email-sign-up">EMAIL</label>
+                        </div>
 
-                <label for="password-input">Password</label>
-                <input type="password" name="password" id="password">
+                        <div class="inputbox-container">
+                            <input class="inputbox" type="text" name="username" id="username-sign-up">
+                            <label for="username-sign-up">USERNAME</label>
+                        </div>
 
-                <label for="username-input">Username</label>
-                <input type="text" name="username" id="username">
-
-                <input type="submit" name="submit" id="submit">
-            </form>
+                        <div class="inputbox-container">
+                            <input class="inputbox" type="password" name="password" id="password-sign-up">
+                            <label for="password-sign-up">PASSWORD</label>
+                        </div>
+                        
+                        <input type="submit" name="signup" id="signup-btn" value="Sign Up">
+                    </form>
+                    <p id="error-message" class="hidden"></p>
+                </div>
+            </section>
         </main>
+        <div id="headerandfooter">
+            <header>
+                <h1><span id="portal"><a href="/des157b/">DES 157B</a></span> <i class="fa-solid fa-chevron-right"></i> <span id="title">User Management System</span></h1>
+            </header>
+            <footer>
+                <a href="mailto:&#098;&#117;&#102;&#102;&#101;&#114;&#045;&#100;&#101;&#098;&#116;&#111;&#114;&#046;&#048;&#064;&#105;&#099;&#108;&#111;&#117;&#100;&#046;&#099;&#111;&#109;">Email</a>
+                <a href="https://validator.w3.org/check?uri=https://dasliao.github.io/des157b/studio3">Valid HTML 5</a>
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://dasliao.github.io/des157b/studio3">Valid CSS</a>
+            </footer>
+        </div>
     </div>
     <script>
         Parse.initialize("1KeaItVqFLSYamBOBEHQttvnIMbJ9HMDsil2YPSz", "rd2kGzZZf8TPYwbMmCe4rfqFgUSpaJxemTuVGr7H"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
         Parse.serverURL = "https://parseapi.back4app.com/";
 
-        document.getElementById('register').addEventListener('submit', function(event){
+        document.querySelector('#register').addEventListener('submit', function(event){
             event.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const email = document.getElementById('email').value;
+            const username = document.getElementById('username-sign-up').value;
+            const password = document.getElementById('password-sign-up').value;
+            const email = document.getElementById('email-sign-up').value;
             console.log(`${username} ${password} ${email}`);
             registerAccount(username, password, email);
         });
@@ -54,15 +71,30 @@
             user.set('username', username);
             user.set('email', email);
             user.set('password', password);
+            let profileImageID = Math.floor(Math.random()*12345678);
+            user.set('profilepicid', profileImageID);
 
             try {
                 let userResult = await user.signUp();
+                const session = user.getSessionToken();
+                setCookie('des157user', session, 1);
                 console.log('User signed up', userResult);
+
+                window.location.assign('profile.html');
             } catch (error) {
                 console.error('Error while signing up user', error);
+                document.getElementById('error-message').className = 'visible';
+                document.getElementById('error-message').innerText = error.message;
             }
         }
 
+        function setCookie(cookieName, cookieValue, expiredays) {
+            const date = new Date();
+            date.setTime(date.getTime() + (expiredays * 24 * 60 * 60 * 1000));
+            let expires = "expires="+ date.toUTCString();
+            console.log(cookieName + "=" + cookieValue + ";" + expires + ";path=/");
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+        }
     </script>
 </body>
 </html>
