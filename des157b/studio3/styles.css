@@ -92,10 +92,14 @@ form {
 
 #go-to-signup-btn {
     text-decoration: none;
-    color: black;
-    font-size: 1em;
+    color: rgb(199, 216, 238);
+    font-size: 0.75em;
     text-align: center;
     margin-top: 30px;
+}
+
+#go-to-signup-btn:hover {
+    color: rgb(20, 32, 43);
 }
 
 input[type=submit] {
@@ -110,7 +114,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    color: black;
+    color: rgb(20, 32, 43);
 }
 
 #error-message.visible {
@@ -122,3 +126,4 @@ input[type=submit]:hover {
 #error-message.hidden {
     background-color: rgba(255, 255, 0, 0);
 }
+

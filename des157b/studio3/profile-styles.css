@@ -116,6 +116,11 @@ button:hover {
 #quote-controller p {
     font-weight: 300;
     cursor: pointer;
+    transition: 500ms all ease-in-out;
+}
+
+#saved-quote:hover, #shuffle-quote:hover  {
+    color: rgb(11, 23, 34);
 }
 
 #right p {
