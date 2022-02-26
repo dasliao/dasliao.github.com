@@ -8,16 +8,26 @@
     <title>Testing Three.js</title>
     <style>
         body { margin: 0; }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            display:block;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    
+    <div id="info">Description</div>
 
 
     
     <script>
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 500);
 
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -28,7 +38,30 @@
         const cube = new THREE.Mesh(geometry, material);
         scene.add( cube );
 
-        camera.position.z = 5;
+        const points = [];
+        points.push( new THREE.Vector3( - 10, 0, 0 ) );
+        points.push( new THREE.Vector3( 0, 10, 0 ) );
+        points.push( new THREE.Vector3( 10, 0, 0 ) );
+        const geometry2 = new THREE.BufferGeometry().setFromPoints( points );
+        const line = new THREE.Line( geometry2, material );
+        scene.add( line );
+
+        const curve = new THREE.EllipseCurve(
+            0,  0,            // ax, aY
+            10, 10,           // xRadius, yRadius
+            0,  2 * Math.PI,  // aStartAngle, aEndAngle
+            false,            // aClockwise
+            0                 // aRotation
+        );
+
+        const points2 = curve.getPoints( 50 );
+        const geometry3 = new THREE.BufferGeometry().setFromPoints( points2 );
+
+        // Create the final object to add to the scene
+        const ellipse = new THREE.Line( geometry3, material );
+
+        camera.position.set( 0, 0, 20 );
+        camera.lookAt( 0, 0, 0 );
 
         function animate() {
             requestAnimationFrame( animate );
@@ -37,6 +70,8 @@
             renderer.render( scene, camera );
         }
         animate();
+
+
     </script>
 </body>
 </html>
