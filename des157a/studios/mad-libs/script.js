@@ -142,7 +142,7 @@
         if (input.getAttribute('class') == 'input-area-boxes' || input.getAttribute('class') == 'input-area-labels') {
             console.log(inputAreaBox[processIdx]);
             inputAreaBox[processIdx].focus();
-            inputAreaBox[processIdx].style.border = 'border: 1px solid #77C0C6';
+            inputAreaBox[processIdx].style.border = '1px solid #77C0C6';
             inputAreaBox[processIdx].style.boxShadow = '0px 0px 5px rgba(0, 0, 0, 0.2)';
             inputAreaLabel[processIdx].style.color = '#77C0C6';
             inputAreaLabel[processIdx].style.fontSize = '16px';
@@ -261,7 +261,6 @@
             idxIncrement();
             displayInputArea(processIdx, preProcessIdx);
             submission();
-            
         }
 
         if (input.getAttribute('id') == 'back-btn') {
